@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+import fontSize from "./config/fontSize";
+
 export default {
 	content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +10,7 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontSize,
 			colors: {
 				background: "var(--background)",
 				foreground: "var(--foreground)",
