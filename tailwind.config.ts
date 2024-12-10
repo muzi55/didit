@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+import colors from "./config/color";
 import fontSize from "./config/fontSize";
 
 export default {
@@ -11,140 +12,7 @@ export default {
 	theme: {
 		extend: {
 			fontSize,
-			colors: {
-				primary: {
-					DEFAULT: "var(--primary)",
-					dark: "var(--primary-dark)",
-				},
-				secondary: {
-					DEFAULT: "var(--secondary)",
-					dark: "var(--secondary-dark)",
-				},
-				tertiary: {
-					DEFAULT: "var(--tertiary)",
-					dark: "var(--tertiary-dark)",
-				},
-				textColor: {
-					DEFAULT: "var(--primary-text)",
-					secondary: "var(--secondary-text)",
-				},
-				stroke: {
-					DEFAULT: "var(--stroke)",
-				},
-				dark: {
-					DEFAULT: "var(--dark-1)",
-					1: "var(--dark-1)",
-					2: "var(--dark-2)",
-					3: "var(--dark-3)",
-					4: "var(--dark-4)",
-					5: "var(--dark-5)",
-					6: "var(--dark-6)",
-					7: "var(--dark-7)",
-					8: "var(--dark-8)",
-				},
-				write: {
-					DEFAULT: "var(--write)",
-					1: "var(--write)",
-				},
-				gray: {
-					DEFAULT: "var(--gray-1)",
-					1: "var(--gray-1)",
-					2: "var(--gray-2)",
-					3: "var(--gray-3)",
-					4: "var(--gray-4)",
-					5: "var(--gray-5)",
-					6: "var(--gray-6)",
-					7: "var(--gray-7)",
-				},
-				yellow: {
-					DEFAULT: "var(--yellow)",
-					"dark-1": "var(--yellow-dark)",
-					"dark-2": "var(--yellow-dark-2)",
-					"light-1": "var(--yellow-light)",
-					"light-2": "var(--yellow-light-2)",
-					"light-3": "var(--yellow-light-3)",
-					"light-4": "var(--yellow-light-4)",
-					neon: "var(--yellow-neon)",
-					"neon-dark": "var(--yellow-neon-dark)",
-					"neon-light": "var(--yellow-neon-light)",
-				},
-				orange: {
-					DEFAULT: "var(--orange)",
-					"dark-1": "var(--orange-dark)",
-					"light-1": "var(--orange-light)",
-					"light-2": "var(--orange-light-2)",
-					"light-3": "var(--orange-light-3)",
-					"light-4": "var(--orange-light-4)",
-					"light-5": "var(--orange-light-5)",
-				},
-				red: {
-					DEFAULT: "var(--red)",
-					"dark-1": "var(--red-dark)",
-					"light-1": "var(--red-light)",
-					"light-2": "var(--red-light-2)",
-					"light-3": "var(--red-light-3)",
-					"light-4": "var(--red-light-4)",
-					"light-5": "var(--red-light-5)",
-					"light-6": "var(--red-light-6)",
-				},
-				pink: {
-					DEFAULT: "var(--pink)",
-					"dark-1": "var(--pink-dark)",
-					"light-1": "var(--pink-light)",
-					"light-2": "var(--pink-light-2)",
-					"light-3": "var(--pink-light-3)",
-					"light-4": "var(--pink-light-4)",
-				},
-				purple: {
-					DEFAULT: "var(--purple)",
-					"dark-1": "var(--purple-dark)",
-					"dark-2": "var(--purple-dark-2)",
-					"light-1": "var(--purple-light)",
-					"light-2": "var(--purple-light-2)",
-					"light-3": "var(--purple-light-3)",
-					"light-4": "var(--purple-light-4)",
-					"light-5": "var(--purple-light-5)",
-				},
-				blue: {
-					DEFAULT: "var(--blue)",
-					"dark-1": "var(--blue-dark)",
-					"light-1": "var(--blue-light)",
-					"light-2": "var(--blue-light-2)",
-					"light-3": "var(--blue-light-3)",
-					"light-4": "var(--blue-light-4)",
-					"light-5": "var(--blue-light-5)",
-				},
-				cyan: {
-					DEFAULT: "var(--cyan)",
-					"dark-1": "var(--cyan-dark)",
-					"light-1": "var(--cyan-light)",
-					"light-2": "var(--cyan-light-2)",
-					"light-3": "var(--cyan-light-3)",
-				},
-				teal: {
-					DEFAULT: "var(--teal)",
-					"dark-1": "var(--teal-dark)",
-					"light-1": "var(--teal-light)",
-					"light-2": "var(--teal-light-2)",
-					"light-3": "var(--teal-light-3)",
-				},
-				green: {
-					DEFAULT: "var(--green)",
-					"dark-1": "var(--green-dark)",
-					"light-1": "var(--green-light)",
-					"light-2": "var(--green-light-2)",
-					"light-3": "var(--green-light-3)",
-					"light-4": "var(--green-light-4)",
-					"light-5": "var(--green-light-5)",
-					"light-6": "var(--green-light-6)",
-				},
-				alert: {
-					success: "var(--alert-success)",
-					info: "var(--alert-info)",
-					warning: "var(--alert-warning)",
-					danger: "var(--alert-danger)",
-				},
-			},
+			colors,
 		},
 	},
 	plugins: [],
