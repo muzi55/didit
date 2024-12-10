@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+import colors from "./config/color";
 import fontSize from "./config/fontSize";
 
 export default {
@@ -11,10 +12,7 @@ export default {
 	theme: {
 		extend: {
 			fontSize,
-			colors: {
-				background: "var(--background)",
-				foreground: "var(--foreground)",
-			},
+			colors,
 		},
 	},
 	plugins: [],
