@@ -5,7 +5,11 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 
-function HeaderLogo() {
+interface HeaderLogoProps {
+	isActive: boolean;
+}
+
+function HeaderLogo({ isActive }: HeaderLogoProps) {
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
@@ -19,12 +23,20 @@ function HeaderLogo() {
 	return (
 		<h1 className="inline-block">
 			<Link href="/">
-				<Image
-					src={`/static/images/${logoImage}`}
-					alt="Didit logo"
-					width={47}
-					height={36}
-				/>
+				{isActive ? (
+					<span className="text-[2.25rem] font-bold text-secondary-dark dark:text-white">
+						<span className="text-secondary-dark dark:text-primary">/</span>
+						did
+						<span className="text-secondary-dark dark:text-primary">it/</span>
+					</span>
+				) : (
+					<Image
+						src={`/static/images/${logoImage}`}
+						alt="Didit logo"
+						width={47}
+						height={36}
+					/>
+				)}
 			</Link>
 		</h1>
 	);

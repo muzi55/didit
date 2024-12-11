@@ -3,7 +3,7 @@ import HeaderLogo from "./HeaderLogo";
 export default function Header() {
 	return (
 		<header>
-			<HeaderLogo />
+			<HeaderLogo isActive={true} />
 		</header>
 	);
 }
