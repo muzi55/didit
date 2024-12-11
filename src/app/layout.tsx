@@ -26,10 +26,10 @@ export default function RootLayout({
 			<body
 				className={`${suitRegular.variable} ${suitMedium.variable} ${suitBold.variable} ${suitSemiBold.variable}`}
 			>
-				<Header />
-				{children}
-
-				<ThemeProvider attribute="class">{children}</ThemeProvider>
+				<ThemeProvider attribute="class">
+					<Header />
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	);
