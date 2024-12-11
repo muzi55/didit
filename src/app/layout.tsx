@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 
 import {
 	suitBold,
@@ -20,11 +21,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="ko">
+		<html lang="ko" suppressHydrationWarning>
 			<body
 				className={`${suitRegular.variable} ${suitMedium.variable} ${suitBold.variable} ${suitSemiBold.variable}`}
 			>
-				{children}
+				<ThemeProvider attribute="class">{children}</ThemeProvider>
 			</body>
 		</html>
 	);
