@@ -7,6 +7,7 @@ import { icons } from "@/shared/libs/common/icons";
 import Dropdown from "../dropdown/Dropdown";
 import NavIconWithText from "./NavIconWithText";
 import NavItem from "./NavItem";
+import NavSubItem from "./NavSubItem";
 
 const navArray = [
 	{
@@ -77,7 +78,11 @@ function HeaderNav() {
 									</NavIconWithText>
 								}
 							>
-								<p>item</p>
+								{item.dropdownList.map(subItem => (
+									<NavSubItem key={subItem.title} href={subItem.href}>
+										{subItem.title}
+									</NavSubItem>
+								))}
 							</Dropdown>
 						);
 					return (
