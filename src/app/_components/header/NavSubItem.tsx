@@ -7,9 +7,13 @@ interface NavSubItemProps {
 }
 function NavSubItem({ children, href }: NavSubItemProps) {
 	return (
-		<Link href={href}>
-			<h3 className="ml-[60px] text-bodySmall400 text-secondary">{children}</h3>
-		</Link>
+		<li className="mb-[18px] last:mb-0">
+			<Link className="" href={href}>
+				<h3 className="flex items-center text-bodySmall400 text-secondary">
+					{children}
+				</h3>
+			</Link>
+		</li>
 	);
 }
 
