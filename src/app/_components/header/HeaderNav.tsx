@@ -3,13 +3,12 @@ import { useSelectedLayoutSegment } from "next/navigation";
 import React from "react";
 
 import { icons } from "@/shared/libs/common/icons";
+import type { headerNavType } from "@/shared/types/header/navType";
 
-import Dropdown from "../dropdown/Dropdown";
-import NavIconWithText from "./NavIconWithText";
+import NavDropdown from "./NavDropdown";
 import NavItem from "./NavItem";
-import NavSubList from "./NavSubList";
 
-const navArray = [
+const navArray: headerNavType[] = [
 	{
 		href: "/peed",
 		segment: "peed",
@@ -61,36 +60,27 @@ const navArray = [
 
 function HeaderNav() {
 	const segment = useSelectedLayoutSegment();
+
 	return (
 		<nav>
 			<ul>
 				{navArray.map(item => {
 					if (item.dropdown)
 						return (
-							<Dropdown
-								key={item.href}
-								trigger={
-									<NavIconWithText
-										icon={item.icon}
-										active={segment === item.segment}
-									>
-										{item.content}
-										<span className="ml-10">{icons.angleUp}</span>
-									</NavIconWithText>
-								}
-							>
-								<NavSubList dropdownList={item.dropdownList} />
-							</Dropdown>
+							<li key={item.href} className="mb-[40px]">
+								<NavDropdown item={item} />
+							</li>
 						);
 					return (
-						<NavItem
-							key={item.href}
-							href={item.href}
-							active={segment === item.segment}
-							icon={segment === item.segment ? item.activeIcon : item.icon}
-						>
-							피드
-						</NavItem>
+						<li className="mb-[40px]" key={item.href}>
+							<NavItem
+								href={item.href}
+								active={segment === item.segment}
+								icon={segment === item.segment ? item.activeIcon : item.icon}
+							>
+								{item.content}
+							</NavItem>
+						</li>
 					);
 				})}
 			</ul>

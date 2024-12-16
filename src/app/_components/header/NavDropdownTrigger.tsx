@@ -8,13 +8,18 @@ import NavIconWithText from "./NavIconWithText";
 
 interface NavDropdownTriggerProps {
 	item: headerNavType;
+	isOpen: boolean;
 }
-export default function NavDropdownTrigger({ item }: NavDropdownTriggerProps) {
+export default function NavDropdownTrigger({
+	item,
+	isOpen,
+}: NavDropdownTriggerProps) {
 	const segment = useSelectedLayoutSegment();
+	const openRotate = isOpen ? "rotate-180" : "rotate-0";
 	return (
 		<NavIconWithText icon={item.icon} active={segment === item.segment}>
-			{item.content}
-			<span className="ml-10">{icons.angleUp}</span>
+			<span className="mr-10">{item.content}</span>
+			<span className={openRotate}>{icons.angleUp}</span>
 		</NavIconWithText>
 	);
 }
