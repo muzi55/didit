@@ -75,6 +75,7 @@ function HeaderNav() {
 										active={segment === item.segment}
 									>
 										{item.content}
+										<span className="ml-10">{icons.angleUp}</span>
 									</NavIconWithText>
 								}
 							>

@@ -15,10 +15,12 @@ export default function NavIconWithText({
 }: NavIconWithText) {
 	const navActivePoint = active ? style.navItem : "";
 	return (
-		<span className={`relative flex items-center ${navActivePoint}`}>
+		<span
+			className={`relative flex items-center cursor-pointer ${navActivePoint}`}
+		>
 			<span className="ml-6 mr-3">{icon}</span>
 			<span
-				className={`text-bodyMedium400 ${active ? "text-primary" : "text-secondary"}`}
+				className={`flex item-center text-bodyMedium400 ${active ? "text-primary" : "text-secondary"}`}
 			>
 				{children}
 			</span>
