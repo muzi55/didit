@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-import style from "./NavItem.module.css";
+import NavIconWithText from "./NavIconWithText";
+
 interface NavItemProps {
 	icon: React.ReactNode;
 	children: React.ReactNode;
@@ -14,18 +15,11 @@ export default function NavItem({
 	href,
 	active,
 }: NavItemProps) {
-	const navActivePoint = active ? style.navItem : "";
 	return (
-		<Link
-			className={`relative flex items-center ${navActivePoint}`}
-			href={href}
-		>
-			<span className="ml-6 mr-3">{icon}</span>
-			<span
-				className={`text-bodyMedium400 ${active ? "text-primary" : "text-secondary"}`}
-			>
+		<Link href={href}>
+			<NavIconWithText icon={icon} active={active}>
 				{children}
-			</span>
+			</NavIconWithText>
 		</Link>
 	);
 }
