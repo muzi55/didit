@@ -10,14 +10,19 @@ export default function Header() {
 	const { isSidebarOpen, setToggleSidebar } = useHeaderSlide();
 	const sidebarRotate = isSidebarOpen ? "rotate-180" : "";
 	const slideCloseWidth = isSidebarOpen ? "w-[272px]" : "w-[80px]";
+	const sidebarMargin = isSidebarOpen
+		? "mt-[33px] justify-end mr-[45px]"
+		: "mt-[38px] justify-center";
 	return (
 		<header className={`h-full bg-secondary ${slideCloseWidth}`}>
 			<HeaderLogo isActive={isSidebarOpen} />
 			<HeaderNav />
 			<HeaderProfile />
-			<button onClick={setToggleSidebar}>
-				<div className={sidebarRotate}>{icons.doubleAngle}</div>
-			</button>
+			<div className={`flex ${sidebarMargin}`}>
+				<button className="" onClick={setToggleSidebar}>
+					<div className={sidebarRotate}>{icons.doubleAngle}</div>
+				</button>
+			</div>
 		</header>
 	);
 }
