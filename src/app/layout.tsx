@@ -9,7 +9,7 @@ import {
 	suitRegular,
 	suitSemiBold,
 } from "../fonts/fonts";
-import Header from "./_components/header/header";
+import Header from "./_components/header/Header";
 
 export const metadata: Metadata = {
 	title: "Didit",

@@ -1,28 +1,20 @@
 "use client";
-import { icons } from "@/shared/libs/common/icons";
 import { useHeaderSlide } from "@/shared/store/header/useHeaderSlide";
 
 import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
 import HeaderProfile from "./profile/HeaderProfile";
+import SidebarButton from "./SidebarButton";
 
 export default function Header() {
-	const { isSidebarOpen, setToggleSidebar } = useHeaderSlide();
-	const sidebarRotate = isSidebarOpen ? "rotate-180" : "";
+	const { isSidebarOpen } = useHeaderSlide();
 	const slideCloseWidth = isSidebarOpen ? "w-[272px]" : "w-[80px]";
-	const sidebarMargin = isSidebarOpen
-		? "mt-[33px] justify-end mr-[45px]"
-		: "mt-[38px] justify-center";
 	return (
-		<header className={`h-full bg-secondary ${slideCloseWidth}`}>
+		<header className={`h-[100dvh] bg-secondary ${slideCloseWidth}`}>
 			<HeaderLogo isActive={isSidebarOpen} />
 			<HeaderNav />
 			<HeaderProfile />
-			<div className={`flex ${sidebarMargin}`}>
-				<button className="" onClick={setToggleSidebar}>
-					<div className={sidebarRotate}>{icons.doubleAngle}</div>
-				</button>
-			</div>
+			<SidebarButton />
 		</header>
 	);
 }
