@@ -9,9 +9,9 @@ import HeaderProfile from "./profile/HeaderProfile";
 export default function Header() {
 	const { isSidebarOpen, setToggleSidebar } = useHeaderSlide();
 	const sidebarRotate = isSidebarOpen ? "rotate-180" : "";
-
+	const slideCloseWidth = isSidebarOpen ? "w-[272px]" : "w-[80px]";
 	return (
-		<header className="bg-secondary">
+		<header className={`h-full bg-secondary ${slideCloseWidth}`}>
 			<HeaderLogo isActive={isSidebarOpen} />
 			<HeaderNav />
 			<HeaderProfile />
