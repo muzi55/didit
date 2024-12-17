@@ -9,7 +9,6 @@ import {
 	suitRegular,
 	suitSemiBold,
 } from "../fonts/fonts";
-import Header from "./_components/header/Header";
 
 export const metadata: Metadata = {
 	title: "Didit",
@@ -26,10 +25,7 @@ export default function RootLayout({
 			<body
 				className={`${suitRegular.variable} ${suitMedium.variable} ${suitBold.variable} ${suitSemiBold.variable}`}
 			>
-				<ThemeProvider attribute="class">
-					<Header />
-					{children}
-				</ThemeProvider>
+				<ThemeProvider attribute="class">{children}</ThemeProvider>
 			</body>
 		</html>
 	);
