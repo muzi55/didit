@@ -2,6 +2,7 @@
 import React from "react";
 
 import useDropdown from "@/shared/hooks/common/useDropdown";
+import { useHeaderSlide } from "@/shared/store/header/useHeaderSlide";
 import type { headerNavType } from "@/shared/types/header/navType";
 
 import Dropdown from "../dropdown/Dropdown";
@@ -13,7 +14,7 @@ interface NavDropdownProps {
 }
 export default function NavDropdown({ item }: NavDropdownProps) {
 	const { isOpen, handleToggleDropdown } = useDropdown();
-
+	const { isSidebarOpen } = useHeaderSlide();
 	return (
 		<Dropdown
 			key={item.href}
@@ -21,7 +22,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
 			setIsOpen={handleToggleDropdown}
 			trigger={<NavDropdownTrigger isOpen={isOpen} item={item} />}
 		>
-			<NavSubList dropdownList={item.dropdownList ?? []} />
+			{isSidebarOpen && <NavSubList dropdownList={item.dropdownList ?? []} />}
 		</Dropdown>
 	);
 }
