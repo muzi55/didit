@@ -19,7 +19,7 @@ export default function HeaderLogo({ isActive }: HeaderLogoProps) {
 
 	if (!mounted) return null;
 
-	const logoImage = theme === "dark" ? "logo_check_1.svg" : "logo_check_2.svg";
+	const logoImage = theme === "dark" ? "logo_check_2.svg" : "logo_check_1.svg";
 
 	return (
 		<h1 className="inline-block">
@@ -31,9 +31,9 @@ export default function HeaderLogo({ isActive }: HeaderLogoProps) {
 }
 
 const ActiveLogo = () => {
-	const pointStyle = "text-secondary-dark dark:text-primary";
+	const pointStyle = "text-primary";
 	return (
-		<span className="text-[2.25rem] font-bold text-secondary-dark dark:text-white">
+		<span className="text-[2.25rem] font-bold text-white">
 			<span className={pointStyle}>/</span>
 			did
 			<span className={pointStyle}>it/</span>

@@ -11,8 +11,8 @@ export default function Header() {
 	const sidebarRotate = isSidebarOpen ? "rotate-180" : "";
 
 	return (
-		<header>
-			<HeaderLogo isActive={true} />
+		<header className="bg-secondary">
+			<HeaderLogo isActive={isSidebarOpen} />
 			<HeaderNav />
 			<HeaderProfile />
 			<button onClick={setToggleSidebar}>
