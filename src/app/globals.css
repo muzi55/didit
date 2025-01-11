@@ -121,6 +121,8 @@
   --alert-info: #8CD5FE;
   --alert-warning: #FFC98D;
   --alert-danger: #FF5E5E;
+
+  --button-blue: #007BFF
 }
 
 body {
