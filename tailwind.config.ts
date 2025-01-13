@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+import boxShadow from "./config/boxShadow";
 import colors from "./config/color";
 import fontSize from "./config/fontSize";
 
@@ -13,6 +14,7 @@ export default {
 		extend: {
 			fontSize,
 			colors,
+			boxShadow,
 			width: {
 				inherit: "inherit",
 			},
