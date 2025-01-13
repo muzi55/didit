@@ -14,6 +14,9 @@ export default {
 			fontSize,
 			colors,
 		},
+		width: {
+			inherit: "inherit",
+		},
 	},
 	darkMode: "class",
 	plugins: [],
