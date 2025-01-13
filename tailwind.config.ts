@@ -13,6 +13,9 @@ export default {
 		extend: {
 			fontSize,
 			colors,
+			width: {
+				inherit: "inherit",
+			},
 		},
 	},
 	darkMode: "class",
