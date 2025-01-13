@@ -10,10 +10,6 @@ interface SelectBoxProps {
 export default function SelectBox({ title, children }: SelectBoxProps) {
 	const [open, setOpen] = useState<boolean>(false);
 
-	// useEffect(() => {
-	// return () => setOpen(false);
-	// }, []);
-
 	return (
 		<div className="relative text-textColor-secondary text-bodySmall400 w-[210px]">
 			<button
@@ -24,11 +20,7 @@ export default function SelectBox({ title, children }: SelectBoxProps) {
 				<span className="rotate-180">{icons.angleUp}</span>
 			</button>
 
-			{open && (
-				<ul className="w-[210px] absolute left-0 bottom-[-5px] translate-y-full bg-white z-10 py-[10px] rounded-md">
-					{children}
-				</ul>
-			)}
+			{open && children}
 		</div>
 	);
 }
