@@ -20,14 +20,23 @@ export default function Home() {
 
 				<div>
 					<SelectBox title={"제목2"}>
-						<SelectBoxInfoItem onClick={() => {}} info={<div>아이템1</div>}>
+						<SelectBoxInfoItem
+							onClick={() => {}}
+							info={{ description: "설명", guide: "가이드" }}
+						>
 							아이템1
 						</SelectBoxInfoItem>
-						<SelectBoxInfoItem onClick={() => {}} info={<div>아이템2</div>}>
+						<SelectBoxInfoItem
+							onClick={() => {}}
+							info={{ description: "설명3123", guide: "가이드123123" }}
+						>
 							아이템2
 						</SelectBoxInfoItem>
-						<SelectBoxInfoItem onClick={() => {}} info={<div>아이템ㄷ</div>}>
-							아이템 3
+						<SelectBoxInfoItem
+							onClick={() => {}}
+							info={{ description: "설명asdasd", guide: "가이드asdasd" }}
+						>
+							아이템3
 						</SelectBoxInfoItem>
 					</SelectBox>
 				</div>
