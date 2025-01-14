@@ -9,7 +9,7 @@ export default function SelectBoxInfo({
 	guide,
 }: SelectBoxInfoProps) {
 	return (
-		<div className="flex flex-col gap-[5px] max-w-[279px] px-3 py-4">
+		<div className="flex flex-col gap-[5px] w-[255px] px-3 py-4 bg-gray-1 mr-[8px]">
 			<SelectBoxInfoTitle title="템플릿 설명" />
 			<SelectBoxInfoDescription>{description}</SelectBoxInfoDescription>
 			<SelectBoxInfoTitle title="작성 가이드" />

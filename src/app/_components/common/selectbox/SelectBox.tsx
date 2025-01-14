@@ -21,7 +21,7 @@ export default function SelectBox({ title, children }: SelectBoxProps) {
 			</button>
 
 			{open && (
-				<div className="flex absolute left-0 bottom-[-5px] translate-y-full bg-white z-10 py-[10px] rounded-md">
+				<div className="flex absolute left-0 bottom-[-5px] translate-y-full bg-white z-10 py-[10px] rounded-md shadow-shadow1">
 					{children}
 				</div>
 			)}

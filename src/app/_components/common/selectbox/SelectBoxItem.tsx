@@ -14,7 +14,7 @@ export default function SelectBoxItem({
 	onMouseLeave,
 }: SelectBoxItemProps) {
 	return (
-		<li className="">
+		<li className="w-[210px]">
 			<button
 				className="block text-start w-full px-[20px] py-[8px] hover:bg-gray-2 hover:text-textColor transition-colors duration-300 cursor-pointer"
 				onClick={onClick}
