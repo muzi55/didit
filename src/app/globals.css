@@ -127,5 +127,6 @@
 
 body {
   font-family: var(--suit-regular);
+  color: var(--primary-text);
 }
 
