@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "./_components/common/Button";
-import RecordHeader from "./_components/wirte/RecordHeader";
+import RecordHeader from "./_components/common/write/RecordHeader";
 
 export default function Home() {
 	return (
