@@ -1,4 +1,4 @@
-interface Images {
+interface ImageProps {
 	[key: string]: {
 		src: string;
 		alt: string;
@@ -7,7 +7,7 @@ interface Images {
 	};
 }
 
-export const images: Images = {
+export const dailyImage: ImageProps = {
 	dailyEmpty: {
 		src: "/static/images/empty/daily_empty.png",
 		alt: "회고록이 없음을 나타내는 아이콘",

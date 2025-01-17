@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
-import { images } from "@/shared/libs/common/images";
+import { dailyImage } from "@/shared/libs/common/dailyImage";
 
 export default function DailyEmpty() {
-	const { dailyEmpty } = images;
+	const { dailyEmpty } = dailyImage;
 	return (
 		<div>
 			<Image
