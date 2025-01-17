@@ -7,7 +7,7 @@ export default function DecorationProvider({
 }: {
 	children: React.ReactNode;
 	style?: React.CSSProperties;
-	className: string;
+	className?: string;
 }) {
 	return (
 		<div
