@@ -1,18 +1,15 @@
 "use client";
 
 import Button from "./_components/common/Button";
-import RecordHeader from "./_components/write/RecordHeader";
+import DailyRecordProvider from "./_components/write/DailyRecordProvider";
 
 export default function Home() {
 	return (
 		<>
 			<div>test</div>
-
-			<RecordHeader>
-				<RecordHeader.Left>1</RecordHeader.Left>
-				<RecordHeader.Right>2</RecordHeader.Right>
-			</RecordHeader>
-
+			<DailyRecordProvider>
+				<p className="bg-red-300">테스트</p>
+			</DailyRecordProvider>
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
 			<Button
