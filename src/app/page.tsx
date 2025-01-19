@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "./_components/common/Button";
+import DailyEmpty from "./_components/write/DailyEmpty";
 import DailyRecordProvider from "./_components/write/DailyRecordProvider";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
 		<>
 			<div>test</div>
 			<DailyRecordProvider>
-				<p className="bg-red-300">테스트</p>
+				<DailyEmpty />
 			</DailyRecordProvider>
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
