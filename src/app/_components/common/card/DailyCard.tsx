@@ -9,7 +9,11 @@ interface DailyCardProps {
 }
 
 export default function DailyCard({ children }: DailyCardProps) {
-	return <div>{children}</div>;
+	return (
+		<div className="w-full rounded-2xl overflow-hidden shadow-shadow3">
+			{children}
+		</div>
+	);
 }
 
 DailyCard.Header = DailyCardHeader;
