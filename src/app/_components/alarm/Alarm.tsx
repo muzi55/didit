@@ -1,7 +1,7 @@
 import React from "react";
 
-import AlarmProvider from "./AlarmProvider";
+import AlarmBox from "./AlarmBox";
 
 export default function Alarm() {
-	return <AlarmProvider>Alarm</AlarmProvider>;
+	return <AlarmBox />;
 }

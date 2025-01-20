@@ -27,7 +27,7 @@ export default function Tag({
 			onClick={onClick}
 			className={` flex items-center py-[3px] px-[10px] rounded-full border border-stroke ${tagClasses[type]}`}
 		>
-			{children} {icon && <span className="ml-[1px]">{icons.cross}</span>}
+			{children} {icon && <span className="ml-[1px]">{icons.cross()}</span>}
 		</button>
 	);
 }
