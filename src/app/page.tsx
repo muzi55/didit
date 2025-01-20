@@ -33,7 +33,9 @@ export default function Home() {
 			<Tag onClick={() => {}} type="remove">
 				태그
 			</Tag>
-			<Tag onClick={() => {}}>태그</Tag>
+			<Tag onClick={() => {}} type="hightLight">
+				태그
+			</Tag>
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
 			<Button
