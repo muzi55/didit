@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import RecordHeader from "@/app/_components/common/write/RecordHeader";
+import RecordHeader from "@/app/_components/write/RecordHeader";
 
 import DecorationProvider from "../DecorationProvider";
 
