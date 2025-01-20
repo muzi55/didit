@@ -8,5 +8,5 @@ export interface MyAlarmContentProps {
 
 export interface AlarmSettingProps {
 	active: boolean;
-	setActive: (value: boolean) => void;
+	setActive: () => void;
 }

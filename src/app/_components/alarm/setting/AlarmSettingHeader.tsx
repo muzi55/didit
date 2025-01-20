@@ -1,4 +1,4 @@
-import type { AlarmSettingProps } from "./alarmType";
+import type { AlarmSettingProps } from "../alarmType";
 import SwitchButton from "./SwitchButton";
 
 export const AlarmSettingHeader = ({
@@ -14,7 +14,7 @@ export const AlarmSettingHeader = ({
 				</p>
 			</div>
 			<div className="ml-[9px]">
-				<SwitchButton active={active} setActive={() => setActive(!active)} />
+				<SwitchButton active={active} setActive={setActive} />
 			</div>
 		</div>
 	);

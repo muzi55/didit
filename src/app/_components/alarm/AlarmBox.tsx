@@ -3,9 +3,9 @@ import React, { useState } from "react";
 
 import { crossMedium, icons } from "@/shared/libs/common/icons";
 
-import AlarmSetting from "./AlarmSetting";
 import { AlarmTabs } from "./AlarmTabs";
 import MyAlarmSection from "./MyAlarmSection";
+import AlarmSetting from "./setting/AlarmSetting";
 
 const textArr = [
 	{

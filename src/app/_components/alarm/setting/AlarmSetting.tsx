@@ -5,17 +5,21 @@ import { AlarmSettingHeader } from "./AlarmSettingHeader";
 
 export default function AlarmSetting() {
 	const [active, setActive] = useState<boolean>(false);
+
+	const handleSwitchActive = () => {
+		setActive(!active);
+	};
 	return (
 		<div className="py-[30px] px-[20px]">
-			<AlarmSetting.Header active={active} setActive={setActive} />
+			<AlarmSetting.Header active={active} setActive={handleSwitchActive} />
 			{active && <AlarmSetting.Form />}
 		</div>
 	);
 }
 
-const AlarmSettingForm = () => {
+const AlarmSettingSection = () => {
 	return (
-		<div className="flex flex-col gap-[20px] pt-[20px] border-t border-stroke">
+		<section className="flex flex-col gap-[20px] pt-[20px] border-t border-stroke">
 			<div>
 				<h4 className="text-bodySmall500 mb-[10px]">반복 알림 설정</h4>
 				<p className="text-bodyExtraSmall400">
@@ -25,9 +29,9 @@ const AlarmSettingForm = () => {
 
 			<AlarmSettingBox title="알림 시간">123</AlarmSettingBox>
 			<AlarmSettingBox title="시간 설정">123</AlarmSettingBox>
-		</div>
+		</section>
 	);
 };
 
 AlarmSetting.Header = AlarmSettingHeader;
-AlarmSetting.Form = AlarmSettingForm;
+AlarmSetting.Form = AlarmSettingSection;

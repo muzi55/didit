@@ -1,6 +1,6 @@
 import React from "react";
 
-import type { AlarmSettingProps } from "./alarmType";
+import type { AlarmSettingProps } from "../alarmType";
 
 export default function SwitchButton({ active, setActive }: AlarmSettingProps) {
 	return (
