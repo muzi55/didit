@@ -1,8 +1,6 @@
-import Image from "next/image";
 import React from "react";
 
-import { AlarmImg } from "./AlarmImage";
-import { MyAlarmContentProps } from "./alarmType";
+import type { MyAlarmContentProps } from "./alarmType";
 import { MyAlarmContent } from "./MyAlarmContent";
 
 interface MyAlarmSectionProps {

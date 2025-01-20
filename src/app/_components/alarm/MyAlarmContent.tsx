@@ -1,7 +1,8 @@
-import React from "react";
-import { MyAlarmContentProps } from "./alarmType";
 import Image from "next/image";
+import React from "react";
+
 import { AlarmImg } from "./AlarmImage";
+import type { MyAlarmContentProps } from "./alarmType";
 
 export const MyAlarmContent = ({
 	projectTitle,
@@ -26,7 +27,7 @@ export const MyAlarmContent = ({
 					</h4>
 					<button onClick={onClick}>x</button>
 				</div>
-                
+
 				<div className="flex justify-between">
 					<div className="text-bodySmall400 line-clamp-2 mr-[9px]">
 						{content}

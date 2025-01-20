@@ -14,14 +14,14 @@ const textArr = [
 		img: "",
 		onClick: () => {},
 	},
-    {
+	{
 		projectTitle: "디딧23",
 		content: "디딧 프로젝트내용",
 		time: "5분",
 		img: "",
 		onClick: () => {},
 	},
-    {
+	{
 		projectTitle: "디딧51",
 		content: "디딧 프로젝트내용",
 		time: "5분",
@@ -53,8 +53,20 @@ export default function AlarmBox() {
 
 			<AlarmTabs activeIndex={tab} setActiveIndex={setTab}>
 				<AlarmTabs.Tab title="나에게 온 알림">
-					<MyAlarmSection alarmList={textArr} sectionTitle="나에게 온 알림" />
-					<MyAlarmSection alarmList={textArr} sectionTitle="나에게 온 알림" />
+					{[].length > 0 ? (
+						<>
+							<MyAlarmSection
+								alarmList={[textArr[0]]}
+								sectionTitle="나에게 온 알림"
+							/>
+							<MyAlarmSection
+								alarmList={textArr}
+								sectionTitle="나에게 온 알림"
+							/>
+						</>
+					) : (
+						<AlarmEmpty />
+					)}
 				</AlarmTabs.Tab>
 				<AlarmTabs.Tab title="알림 설정">
 					<div>알림2</div>
@@ -73,5 +85,14 @@ const AlarmHeader = ({ onClick }: { onClick: () => void }) => {
 	);
 };
 
+const AlarmEmpty = () => {
+	return (
+		<div className="flex flex-col items-center text-center py-[50px]">
+			<div className="mb-[10px]">{icons.emptyAlarm}</div>
+			<p className="text-bodyMedium700">아직 알림이 없네요. </p>
+			<p className="text-bodySmall400">새로운 소식이 생기면 알려드릴게요!</p>
+		</div>
+	);
+};
 AlarmBox.AlarmHeader = AlarmHeader;
 AlarmBox.AlarmTabs = AlarmTabs;
