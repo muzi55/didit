@@ -1,28 +1,62 @@
-export function openPopup(url: string) {
-	const width = window.innerWidth; // 현재 브라우저의 너비를 가져옴
-	const height = 600; // 고정된 높이 값
+interface PopupOptions {
+	width: number;
+	height: number;
+	scrollbars: boolean;
+	resizable: boolean;
+}
 
-	const popup = window.open(
-		url,
-		"popup",
-		`width=${width},height=${height},scrollbars=yes,resizable=yes`,
-	);
+function getPopupOptions(options: Partial<PopupOptions>) {
+	const defaultOptions = {
+		width: window.innerWidth,
+		height: 600,
+		scrollbars: true,
+		resizable: true,
+	};
+
+	const finalOptions = {
+		...defaultOptions,
+		...options,
+	};
+
+	return `width=${finalOptions.width},height=${finalOptions.height},scrollbars=${finalOptions.scrollbars},resizable=${finalOptions.resizable}`;
+}
+
+type createFooterPopupContent = {
+	title: string;
+	content: string;
+};
+
+export function openPopup(
+	popupContent: {
+		title: string;
+		content: string;
+	},
+	options: Partial<PopupOptions> = {},
+	createContent: ({
+		title,
+		content,
+	}: createFooterPopupContent) => string = createPopupContent,
+) {
+	const popupOptions = getPopupOptions(options);
+	const popup = window.open("", "popup", popupOptions);
 
 	if (popup) {
-		popup.document.write(`
-            <!DOCTYPE html>
-            <html lang="ko">
-                <head>
-                    <meta charset="UTF-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <title>Popup</title>
-                </head>
-                <body>
-                    <div id="popup-root">테스트 테스트</div>
-                    <script src="/path/to/your/react/bundle.js"></script>
-                </body>
-            </html>
-        `);
+		popup.document.write(createContent(popupContent));
 		popup.document.close();
 	}
+}
+
+function createPopupContent({ title, content }: createFooterPopupContent) {
+	return `
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>${title}</title>
+    </head>
+    <body>
+        <div id="popup-root">${content}</div>
+    </body>
+</html>`;
 }

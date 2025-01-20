@@ -1,12 +1,16 @@
 import React from "react";
 
-import { footerList } from "./constant";
+import type { FooterMenuItem } from "./constant";
+import { COPYRIGHT, footerMenu } from "./constant";
 import style from "./Footer.module.css";
 import { openPopup } from "./popupUtile";
 
 export default function Footer() {
-	const handleClickPopup = () => {
-		openPopup("text");
+	const handleClickPopup = (item: FooterMenuItem) => {
+		openPopup({
+			title: item.title,
+			content: item.html,
+		});
 	};
 
 	return (
@@ -14,10 +18,10 @@ export default function Footer() {
 			className={`flex flex-col gap-[24px] ${style.footer} text-textColor-secondary`}
 		>
 			<ul className="flex gap-3 text-bodyExtraSmall500">
-				{footerList.map(item => (
+				{footerMenu.map(item => (
 					<li key={item.title}>
 						<button
-							onClick={handleClickPopup}
+							onClick={() => handleClickPopup(item)}
 							className="text-bodyExtraSmall500"
 						>
 							{item.title}
@@ -25,9 +29,7 @@ export default function Footer() {
 					</li>
 				))}
 			</ul>
-			<p className="text-bodyExtraSmall400">
-				{"COPYRIGHT (C) 2024 ALL RIGHTS RESERVED"}
-			</p>
+			<p className="text-bodyExtraSmall400">{COPYRIGHT}</p>
 		</footer>
 	);
 }
