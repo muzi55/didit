@@ -7,7 +7,7 @@ interface TagProps {
 	children: React.ReactNode;
 	onClick: () => void;
 	type?: TagType;
-	icon?: React.ReactNode;
+	icon?: boolean;
 }
 
 export default function Tag({
