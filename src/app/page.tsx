@@ -2,6 +2,7 @@
 
 import Button from "./_components/common/Button";
 import DailyCard from "./_components/common/card/DailyCard";
+import Tag from "./_components/common/tag/Tag";
 import DailyEmpty from "./_components/write/DailyEmpty";
 import DailyRecordProvider from "./_components/write/DailyRecordProvider";
 
@@ -27,6 +28,12 @@ export default function Home() {
 					<DailyCard.Body>{`바디 <p>123</p> <h1>123123</h1>`}</DailyCard.Body>
 				</DailyCard>
 			</DailyRecordProvider>
+
+			<Tag onClick={() => {}}>태그</Tag>
+			<Tag onClick={() => {}} type="remove">
+				태그
+			</Tag>
+			<Tag onClick={() => {}}>태그</Tag>
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
 			<Button
