@@ -1,10 +1,14 @@
 import React from "react";
 
 export default function DailyStreakCard({
-	children,
+	title,
+	attendanceDate,
+	cardFooterText,
 	background = "/static/images/background/bg.webp",
 }: {
-	children: React.ReactNode;
+	title: React.ReactNode;
+	attendanceDate: React.ReactNode;
+	cardFooterText: React.ReactNode;
 	background?: string;
 }) {
 	const backgroundStyle = {
@@ -16,7 +20,13 @@ export default function DailyStreakCard({
 			className={`rounded-[16px] px-[12px] pb-[28px] pt-[20px] bg-cover text-white w-[307px]`}
 			style={backgroundStyle}
 		>
-			{children}
+			<DailyStreakCard.Title>{title}</DailyStreakCard.Title>
+			<DailyStreakCard.AttendanceDate>
+				{attendanceDate}
+			</DailyStreakCard.AttendanceDate>
+			<DailyStreakCard.CardFooterText>
+				{cardFooterText}
+			</DailyStreakCard.CardFooterText>
 		</div>
 	);
 }

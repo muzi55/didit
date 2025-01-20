@@ -13,15 +13,12 @@ export default function Home() {
 				<DailyEmpty />
 			</DailyRecordProvider>
 			<hr />
-			<DailyStreakCard background="/static/images/background/bg.webp">
-				<DailyStreakCard.Title>제목</DailyStreakCard.Title>
-				<DailyStreakCard.AttendanceDate>
-					2021.10.10
-				</DailyStreakCard.AttendanceDate>
-				<DailyStreakCard.CardFooterText>
-					하단 텍스트
-				</DailyStreakCard.CardFooterText>
-			</DailyStreakCard>
+			<DailyStreakCard
+				title={"제목"}
+				attendanceDate={"2021.10.10"}
+				cardFooterText={"하단 텍스트"}
+			/>
+
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
 			<Button
