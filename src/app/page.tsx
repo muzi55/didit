@@ -15,18 +15,20 @@ export default function Home() {
 			</DailyRecordProvider>
 			<hr />
 
-			<DailyRecordProvider>
-				<DailyCard>
-					<DailyCard.Header>헤더</DailyCard.Header>
-					<DailyCard.Body>{`바디 <p>123</p> <h1>123123</h1>`}</DailyCard.Body>
-					<DailyCard.TagList
-						listItem={[
-							{ label: "태그1", onClick: () => {} },
-							{ label: "태그2", onClick: () => {} },
-						]}
-					/>
-				</DailyCard>
-			</DailyRecordProvider>
+			<div className="px-[30px]">
+				<DailyRecordProvider>
+					<DailyCard>
+						<DailyCard.Header>헤더</DailyCard.Header>
+						<DailyCard.Body>{`바디 <p>123</p> <h1>123123</h1>`}</DailyCard.Body>
+						<DailyCard.TagList
+							listItem={[
+								{ label: "태그1", onClick: () => {} },
+								{ label: "태그2", onClick: () => {} },
+							]}
+						/>
+					</DailyCard>
+				</DailyRecordProvider>
+			</div>
 
 			<Tag onClick={() => {}}>태그</Tag>
 			<Tag onClick={() => {}} type="remove">

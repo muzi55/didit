@@ -28,7 +28,7 @@ const meta = {
 				type: "text",
 			},
 			description: "버튼 텍스트",
-			defaultValue: "button",
+			default: "button",
 		},
 		type: {
 			control: {
@@ -36,14 +36,14 @@ const meta = {
 				options: ["add", "remove", "hightLight"],
 			},
 			description: "버튼 색상",
-			defaultValue: "add",
+			default: "add",
 		},
 		icon: {
 			control: {
 				type: "boolean",
 			},
-			description: "아이콘",
-			defaultValue: false,
+			description: "X 아이콘 사용 여부",
+			default: false,
 		},
 	},
 	args: {

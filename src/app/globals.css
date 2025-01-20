@@ -130,3 +130,9 @@ body {
   color: var(--primary-text);
 }
 
+@layer utilities {
+  .dailyCard-padding {
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+}

@@ -5,5 +5,9 @@ export default function DailyRecordProvider({
 }: {
 	children: React.ReactNode;
 }) {
-	return <div className="w-full rounded-2xl overflow-hidden">{children}</div>;
+	return (
+		<div className="w-full rounded-2xl overflow-hidden shadow-shadow3">
+			{children}
+		</div>
+	);
 }
