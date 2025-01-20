@@ -25,7 +25,7 @@ export default function AlarmBox() {
 
 const AlarmHeader = ({ onClick }: { onClick: () => void }) => {
 	return (
-		<div className="flex justify-between">
+		<div className="flex justify-between py-[30px] border-b border-stroke px-[20px]">
 			<h4 className="text-H6">알림</h4>
 			<button onClick={onClick}>{icons.cross(crossMedium)}</button>
 		</div>
