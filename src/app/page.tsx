@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "./_components/common/Button";
+import DailyCard from "./_components/common/card/DailyCard";
 import DailyEmpty from "./_components/write/DailyEmpty";
 import DailyRecordProvider from "./_components/write/DailyRecordProvider";
 
@@ -10,6 +11,19 @@ export default function Home() {
 			<div>test</div>
 			<DailyRecordProvider>
 				<DailyEmpty />
+			</DailyRecordProvider>
+			<hr />
+
+			<DailyRecordProvider>
+				<DailyCard>
+					<DailyCard.Header href="/test">헤더</DailyCard.Header>
+				</DailyCard>
+			</DailyRecordProvider>
+
+			<DailyRecordProvider>
+				<DailyCard>
+					<DailyCard.Header>헤더</DailyCard.Header>
+				</DailyCard>
 			</DailyRecordProvider>
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
