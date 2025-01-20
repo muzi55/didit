@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "./_components/common/Button";
+import CardBookMark from "./_components/common/card/CardBookMark";
 import DailyCard from "./_components/common/card/DailyCard";
 import Tag from "./_components/common/tag/Tag";
 import DailyEmpty from "./_components/write/DailyEmpty";
@@ -14,6 +15,7 @@ export default function Home() {
 				<DailyEmpty />
 			</DailyRecordProvider>
 			<hr />
+			<CardBookMark>북마크</CardBookMark>
 
 			<div className="px-[30px]">
 				<DailyRecordProvider>
