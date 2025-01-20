@@ -8,14 +8,14 @@ import { AlarmTabs } from "./AlarmTabs";
 export default function AlarmBox() {
 	const [tab, setTab] = useState<number>(0);
 	return (
-		<div className="absolute top-0 right-0 alarmBox">
+		<div className="absolute top-0 right-0 alarmBox shadow-shadow1">
 			<AlarmBox.AlarmHeader onClick={() => {}} />
 
 			<AlarmTabs activeIndex={tab} setActiveIndex={setTab}>
-				<AlarmTabs.Tab title="알림1">
+				<AlarmTabs.Tab title="나에게 온 알림">
 					<div>알림1</div>
 				</AlarmTabs.Tab>
-				<AlarmTabs.Tab title="알림2">
+				<AlarmTabs.Tab title="알림 설정">
 					<div>알림2</div>
 				</AlarmTabs.Tab>
 			</AlarmTabs>

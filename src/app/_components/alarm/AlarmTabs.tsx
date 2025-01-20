@@ -16,13 +16,19 @@ export const AlarmTabs = ({
 	setActiveIndex,
 }: ITabProps) => {
 	return (
-		<div>
-			<div className="">
-				{React.Children.map(children, (child, index) => (
-					<button className="" onClick={() => setActiveIndex(index)}>
-						{child.props.title}
-					</button>
-				))}
+		<div className="">
+			<div className="flex py-[5px] px-[7px] gap-[5px] bg-gray-1">
+				{React.Children.map(children, (child, index) => {
+					const activeBackground = activeIndex === index ? "bg-white" : "";
+					return (
+						<button
+							className={`w-full ${activeBackground} rounded-[4px] px-[18px] pt-[9px] pb-[7px] text-bodySmall500`}
+							onClick={() => setActiveIndex(index)}
+						>
+							{child.props.title}
+						</button>
+					);
+				})}
 			</div>
 			<div>
 				{React.Children.map(
