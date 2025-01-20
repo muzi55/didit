@@ -1,9 +1,7 @@
 "use client";
 
 import Button from "./_components/common/Button";
-import CardBookMark from "./_components/common/card/CardBookMark";
-import DailyCard from "./_components/common/card/DailyCard";
-import Tag from "./_components/common/tag/Tag";
+import DailyStreakCard from "./_components/common/card/streakcard/DailyStreakCard";
 import DailyEmpty from "./_components/write/DailyEmpty";
 import DailyRecordProvider from "./_components/write/DailyRecordProvider";
 
@@ -15,31 +13,12 @@ export default function Home() {
 				<DailyEmpty />
 			</DailyRecordProvider>
 			<hr />
+			<DailyStreakCard
+				title={"제목"}
+				attendanceDate={"2021.10.10"}
+				cardFooterText={"하단 텍스트"}
+			/>
 
-			<CardBookMark>북마크</CardBookMark>
-
-			<div className="px-[30px]">
-				<DailyRecordProvider>
-					<DailyCard>
-						<DailyCard.Header>헤더</DailyCard.Header>
-						<DailyCard.Body>{`바디 <p>123</p> <h1>123123</h1>`}</DailyCard.Body>
-						<DailyCard.TagList
-							listItem={[
-								{ label: "태그1", onClick: () => {} },
-								{ label: "태그2", onClick: () => {} },
-							]}
-						/>
-					</DailyCard>
-				</DailyRecordProvider>
-			</div>
-
-			<Tag onClick={() => {}}>태그</Tag>
-			<Tag onClick={() => {}} type="remove">
-				태그
-			</Tag>
-			<Tag onClick={() => {}} type="hightLight">
-				태그
-			</Tag>
 			{/* <SelectBox title={"제목1"}>아이템</SelectBox>
 			<SelectBox title={"제목2"}>아이템</SelectBox> */}
 			<Button
