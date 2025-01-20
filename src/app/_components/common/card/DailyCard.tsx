@@ -12,10 +12,6 @@ export default function DailyCard({ children }: DailyCardProps) {
 		<div>
 			{children}
 			<div>
-				{/* body */}
-				asd
-			</div>
-			<div>
 				{/* tag */}
 				zxc
 			</div>
@@ -38,4 +34,9 @@ const Header = ({
 	);
 };
 
+const Body = ({ children }: { children: string }) => {
+	return <div dangerouslySetInnerHTML={{ __html: children }}></div>;
+};
+
 DailyCard.Header = Header;
+DailyCard.Body = Body;
