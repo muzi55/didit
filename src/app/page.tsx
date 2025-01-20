@@ -1,5 +1,6 @@
 "use client";
 
+import Alarm from "./_components/alarm/Alarm";
 import Button from "./_components/common/Button";
 import DailyStreakCard from "./_components/common/card/streakcard/DailyStreakCard";
 import Footer from "./_components/footer/Footer";
@@ -32,6 +33,7 @@ export default function Home() {
 			>
 				<p className="text-bodySmall400">테스트트</p>
 			</Button>
+			<Alarm />
 		</>
 	);
 }
