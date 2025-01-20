@@ -15,6 +15,7 @@ export default function Home() {
 				<DailyEmpty />
 			</DailyRecordProvider>
 			<hr />
+
 			<CardBookMark>북마크</CardBookMark>
 
 			<div className="px-[30px]">
