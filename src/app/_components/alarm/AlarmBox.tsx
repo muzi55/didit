@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import { crossMedium, icons } from "@/shared/libs/common/icons";
 
+import AlarmSetting from "./AlarmSetting";
 import { AlarmTabs } from "./AlarmTabs";
 import MyAlarmSection from "./MyAlarmSection";
 
@@ -69,7 +70,7 @@ export default function AlarmBox() {
 					)}
 				</AlarmTabs.Tab>
 				<AlarmTabs.Tab title="알림 설정">
-					<div>알림2</div>
+					<AlarmSetting />
 				</AlarmTabs.Tab>
 			</AlarmTabs>
 		</div>
