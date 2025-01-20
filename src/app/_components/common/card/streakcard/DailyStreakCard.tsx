@@ -7,17 +7,14 @@ export default function DailyStreakCard({
 	children: React.ReactNode;
 	background?: string;
 }) {
-	const backgroundImg = `url('${background}')`;
+	const backgroundStyle = {
+		background: `url('${background}') lightgray -204.308px -18.784px / 172.946% 173.571% no-repeat`,
+	};
+
 	return (
 		<div
 			className={`rounded-[16px] px-[12px] pb-[28px] pt-[20px] bg-cover text-white w-[307px]`}
-			style={{
-				backgroundImage: backgroundImg,
-				backgroundColor: "lightgray",
-				backgroundPosition: "-204.308px -18.784px",
-				backgroundSize: "172.946% 173.571%",
-				backgroundRepeat: "no-repeat",
-			}}
+			style={backgroundStyle}
 		>
 			{children}
 		</div>
