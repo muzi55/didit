@@ -23,7 +23,7 @@ export default function NavDropdownTrigger({
 		<NavIconWithText icon={item.icon} active={segment === item.segment}>
 			<span>{item.content}</span>
 			{isSidebarOpen && (
-				<span className={`ml-10 ${openRotate}`}>{icons.angleUp}</span>
+				<span className={`ml-10 ${openRotate}`}>{icons.angleUp()}</span>
 			)}
 		</NavIconWithText>
 	);

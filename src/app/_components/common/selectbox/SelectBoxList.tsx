@@ -5,10 +5,5 @@ export default function SelectBoxList({
 }: {
 	children: React.ReactNode;
 }) {
-	return (
-		<ul className="w-[210px]">
-			{/* // 아이템 */}
-			{children}
-		</ul>
-	);
+	return <ul className="">{children}</ul>;
 }

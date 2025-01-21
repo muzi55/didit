@@ -135,4 +135,9 @@ body {
     padding-left: 20px;
     padding-right: 15px;
   }
+
+  .alarmBox{
+    width: 337px;
+    height: 100dvh;
+  }
 }
