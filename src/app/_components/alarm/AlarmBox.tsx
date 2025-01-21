@@ -79,7 +79,7 @@ export default function AlarmBox() {
 
 const AlarmHeader = ({ onClick }: { onClick: () => void }) => {
 	return (
-		<div className="sticky top-0 flex justify-between py-[30px] border-b border-stroke px-[20px] bg-white">
+		<div className="sticky top-0 left-0 flex justify-between py-[30px] border-b border-stroke px-[20px] bg-white">
 			<h2 className="text-H6">알림</h2>
 			<button onClick={onClick}>{icons.cross(crossMedium)}</button>
 		</div>

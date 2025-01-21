@@ -4,10 +4,11 @@ import type { AlarmCheckDatetime } from "../alarmType";
 import AlarmDateButton from "./AlarmDateButton";
 import AlarmSettingBox from "./AlarmSettingBox";
 import { AlarmSettingHeader } from "./AlarmSettingHeader";
+import { 영부터십이 } from "./constant";
+import DateSelect from "./DateSelect";
 
 export default function AlarmSetting() {
 	const [active, setActive] = useState<boolean>(false);
-
 	const handleSwitchActive = () => {
 		setActive(!active);
 	};
@@ -20,6 +21,11 @@ export default function AlarmSetting() {
 }
 
 const AlarmSettingSection = () => {
+	const [open, setOpen] = useState<boolean>(false);
+	const handleSwitchOpen = () => {
+		setOpen(!open);
+	};
+
 	const [dateCheck, setDateCheck] = useState<AlarmCheckDatetime>({
 		day: {
 			mon: false,
@@ -29,7 +35,7 @@ const AlarmSettingSection = () => {
 			fri: false,
 		},
 		time: {
-			amPm: "am",
+			amPm: "AM",
 			hour: "00",
 			minute: "00",
 		},
@@ -60,6 +66,68 @@ const AlarmSettingSection = () => {
 				fri: !allChecked && anyChecked ? true : !allChecked,
 			},
 		});
+	};
+
+	const handleSelectAmPm = (value: string) => {
+		if (value === "AM" || value === "PM") {
+			setDateCheck({
+				...dateCheck,
+				time: {
+					...dateCheck.time,
+					amPm: value,
+				},
+			});
+		}
+	};
+
+	const handleSelectHour = (value: string) => {
+		if (
+			value === "00" ||
+			value === "05" ||
+			value === "10" ||
+			value === "15" ||
+			value === "20" ||
+			value === "25" ||
+			value === "30" ||
+			value === "35" ||
+			value === "40" ||
+			value === "45" ||
+			value === "50" ||
+			value === "55"
+		) {
+			setDateCheck({
+				...dateCheck,
+				time: {
+					...dateCheck.time,
+					hour: value,
+				},
+			});
+		}
+	};
+
+	const handleSelectMinute = (value: string) => {
+		if (
+			value === "00" ||
+			value === "05" ||
+			value === "10" ||
+			value === "15" ||
+			value === "20" ||
+			value === "25" ||
+			value === "30" ||
+			value === "35" ||
+			value === "40" ||
+			value === "45" ||
+			value === "50" ||
+			value === "55"
+		) {
+			setDateCheck({
+				...dateCheck,
+				time: {
+					...dateCheck.time,
+					minute: value,
+				},
+			});
+		}
 	};
 
 	return (
@@ -123,7 +191,34 @@ const AlarmSettingSection = () => {
 				</div>
 			</AlarmSettingBox>
 
-			<AlarmSettingBox title="시간 설정">시간 설정</AlarmSettingBox>
+			<AlarmSettingBox title="시간 설정">
+				<div className="flex items-center justify-around text-bodySmall400">
+					<DateSelect
+						title={dateCheck.time.amPm}
+						open={open}
+						setOpen={handleSwitchOpen}
+						selectList={["AM", "PM"]}
+						onSelect={handleSelectAmPm}
+					/>
+					{"/"}
+					<DateSelect
+						title={dateCheck.time.hour}
+						open={open}
+						setOpen={handleSwitchOpen}
+						selectList={영부터십이}
+						onSelect={handleSelectHour}
+					/>
+					시
+					<DateSelect
+						title={dateCheck.time.minute}
+						open={open}
+						setOpen={handleSwitchOpen}
+						selectList={영부터십이}
+						onSelect={handleSelectMinute}
+					/>
+					분
+				</div>
+			</AlarmSettingBox>
 		</section>
 	);
 };

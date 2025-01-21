@@ -10,8 +10,8 @@ export interface AlarmSettingProps {
 	active: boolean;
 	setActive: () => void;
 }
-
-type TimeUnion =
+export type AmPmUnion = "AM" | "PM";
+export type TimeUnion =
 	| "00"
 	| "05"
 	| "10"
@@ -34,7 +34,7 @@ export interface AlarmCheckDatetime {
 		fri: boolean;
 	};
 	time: {
-		amPm: "am" | "pm";
+		amPm: AmPmUnion;
 		hour: TimeUnion;
 		minute: TimeUnion;
 	};
