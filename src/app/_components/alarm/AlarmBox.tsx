@@ -72,7 +72,13 @@ export default function AlarmBox() {
 				</AlarmTabs.Tab>
 				<AlarmTabs.Tab title="알림 설정">
 					<AlarmSetting />
-					<SetAlarm />
+					<SetAlarm
+						title={'월, 화, 수, 목'}
+						amPm={'AM'}
+						hour={'15'}
+						minute={'55'}
+						onClick={()=>{}}
+					/>
 				</AlarmTabs.Tab>
 			</AlarmTabs>
 		</div>
