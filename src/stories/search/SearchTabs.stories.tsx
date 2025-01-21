@@ -80,3 +80,24 @@ export const Default: Story = {
 		setActiveIndex: fn(),
 	},
 };
+
+export const ActiveSecondTab: Story = {
+	args: {
+		children: [
+			<SearchTabs.Tab key="0" title="전체">
+				전체
+			</SearchTabs.Tab>,
+			<SearchTabs.Tab key="1" title="회고록">
+				회고록
+			</SearchTabs.Tab>,
+			<SearchTabs.Tab key="2" title="태그">
+				태그
+			</SearchTabs.Tab>,
+			<SearchTabs.Tab key="3" title="스페이스">
+				스페이스
+			</SearchTabs.Tab>,
+		],
+		activeIndex: 1,
+		setActiveIndex: fn(),
+	},
+};
