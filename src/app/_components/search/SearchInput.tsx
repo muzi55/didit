@@ -1,26 +1,37 @@
 "use client";
-import React, { useActionState } from "react";
+import React, { useState } from "react";
 
 import { icons } from "@/shared/libs/common/icons";
 
 import { SEARCH_PLACEHOLDER } from "./constant";
 
 export default function SearchInput() {
-	const [state, formAction, isPending] = useActionState(() => {}, null);
+	const [inputValue, setInputValue] = useState("");
+
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setInputValue(e.target.value);
+	};
+
+	const handleReset = () => {
+		setInputValue("");
+	};
 
 	return (
-		<form className="relative" action={formAction}>
+		<form className="relative" action="#">
 			<input
 				type="text"
 				className="w-full border border-stroke bg-gray-1 text-bodyMedium400 pt-[15px] pr-[17px] pb-[14px] pl-[20px] rounded-[12px] placeholder:text-bodyMedium400"
 				placeholder={SEARCH_PLACEHOLDER}
+				value={inputValue}
+				onChange={handleInputChange}
 			/>
-			{/* <input type="text" name="bookId" readOnly value={bookId} hidden /> */}
 			<div className="absolute top-1/2 right-[17px] -translate-y-1/2 flex">
-				<button className="mr-[20px]" disabled={isPending} type="submit">
-					{icons.crossCircle}
-				</button>
-				<button className="" disabled={isPending} type="submit">
+				{inputValue && (
+					<button type="reset" className="mr-[20px]" onClick={handleReset}>
+						{icons.crossCircle()}
+					</button>
+				)}
+				<button className="" type="submit">
 					{icons.search}
 				</button>
 			</div>
