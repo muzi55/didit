@@ -26,6 +26,7 @@ export default function RootLayout({
 				className={`${suitRegular.variable} ${suitMedium.variable} ${suitBold.variable} ${suitSemiBold.variable}`}
 			>
 				<ThemeProvider attribute="class">{children}</ThemeProvider>
+				<div id="modal-root"></div>
 			</body>
 		</html>
 	);
