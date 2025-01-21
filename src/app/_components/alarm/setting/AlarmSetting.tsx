@@ -219,6 +219,15 @@ const AlarmSettingSection = () => {
 					분
 				</div>
 			</AlarmSettingBox>
+
+			<div className="flex flex-col gap-[11px]">
+				<AlarmDateButton size={"medium"} active={true} onClick={() => {}}>
+					저장
+				</AlarmDateButton>
+				<AlarmDateButton size={"medium"} active={false} onClick={() => {}}>
+					초기화
+				</AlarmDateButton>
+			</div>
 		</section>
 	);
 };
