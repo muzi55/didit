@@ -7,7 +7,7 @@ import Modal from "./_components/modal/Modal";
 import Search from "./_components/search/Search";
 
 export default function Home() {
-	const [active, setActive] = useState<boolean>(false);
+	const [active, setActive] = useState<boolean>(true);
 	const closeActive = () => {
 		setActive(false);
 	};
