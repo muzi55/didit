@@ -22,19 +22,19 @@ export default function Modal({
 
 	return mounted && element
 		? createPortal(
-				<Modal.Container closeModal={closeModal}>{children}</Modal.Container>,
+				<ModalContainer closeModal={closeModal}>{children}</ModalContainer>,
 				element,
 			)
 		: null;
 }
 
-const ModalContainer = ({
+function ModalContainer({
 	children,
 	closeModal,
 }: {
 	children: React.ReactNode;
 	closeModal: () => void;
-}) => {
+}) {
 	const handleBackgroundClick = (e: React.MouseEvent) => {
 		if (e.target === e.currentTarget) {
 			closeModal();
@@ -43,12 +43,10 @@ const ModalContainer = ({
 
 	return (
 		<div
-			className="fixed top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,0.5)] z-50"
+			className="fixed top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,0.5)] z-50 flex justify-center items-center"
 			onClick={handleBackgroundClick}
 		>
 			<div className="bg-white rounded-2xl">{children}</div>
 		</div>
 	);
-};
-
-Modal.Container = ModalContainer;
+}
