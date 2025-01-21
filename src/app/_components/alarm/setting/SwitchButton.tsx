@@ -6,7 +6,7 @@ export default function SwitchButton({ active, setActive }: AlarmSettingProps) {
 	return (
 		<button
 			onClick={setActive}
-			className={`relative inline-flex items-center h-[28px] rounded-full w-[52px] transition-colors duration-300 ${
+			className={`relative inline-flex items-center h-[28px] rounded-full w-[52px] transition-colors duration-300 z-[1] ${
 				active ? "bg-primary" : "bg-dark-8"
 			}`}
 		>

@@ -17,7 +17,7 @@ export const AlarmTabs = ({
 }: ITabProps) => {
 	return (
 		<div className="">
-			<div className="sticky top-[91px] flex py-[5px] px-[7px] gap-[5px] bg-gray-1">
+			<div className="sticky top-[91px] z-10 flex py-[5px] px-[7px] gap-[5px] bg-gray-1">
 				{React.Children.map(children, (child, index) => {
 					const activeBackground = activeIndex === index ? "bg-white" : "";
 					return (
