@@ -2,20 +2,20 @@ import React from "react";
 
 import { DateTimeAndProject } from "./DateTimeAndProject";
 
-interface MemoirProps {
+interface SearchItemProps {
 	dateTime: string;
 	project: string;
 	search: string | React.ReactNode;
 	category: string;
 	content: string;
 }
-export default function Memoir({
+export default function SearchItem({
 	dateTime,
 	project,
 	search,
 	category,
 	content,
-}: MemoirProps) {
+}: SearchItemProps) {
 	return (
 		<div className="flex flex-col gap-[8px]">
 			<DateTimeAndProject dateTime={dateTime} project={project} />

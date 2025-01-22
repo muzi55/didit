@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Memoir from "./Memoir";
 import SearchEmpty from "./SearchEmpty";
+import SearchItem from "./SearchItem";
 import SearchSection from "./SearchSection";
 import { SearchTabs } from "./SearchTabs";
 
@@ -15,7 +15,7 @@ export default function Search() {
 					<SearchTabs.Tab title="전체">
 						<SearchSection title="회고록">
 							{[1, 2, 3].map(el => (
-								<Memoir
+								<SearchItem
 									key={el}
 									dateTime="2021-09-22"
 									project="project"
