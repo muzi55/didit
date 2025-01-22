@@ -4,7 +4,7 @@ interface ITabProps {
 }
 export const SearchTab = ({ children, title }: ITabProps) => {
 	return (
-		<div title={title} className="h-full">
+		<div title={title} className="h-full px-[20px]">
 			{children}
 		</div>
 	);

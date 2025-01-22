@@ -19,7 +19,6 @@ export default function Search() {
 				<div className="">
 					<SearchTabs activeIndex={activeIndex} setActiveIndex={setActiveIndex}>
 						<SearchTabs.Tab title="전체">
-							<div className="px-[20px]">
 								<SearchSection title="회고록">
 									{[1, 2, 3].map(el => (
 										<Memoir
@@ -41,7 +40,6 @@ export default function Search() {
 								<hr />
 								<SearchSection title="스페이스">스페이스</SearchSection>
 								<SearchEmpty />
-							</div>
 						</SearchTabs.Tab>
 						<SearchTabs.Tab title="회고록">
 							<SearchSection title="스페이스">asd</SearchSection>
