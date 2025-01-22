@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import Memoir from "./Memoir";
 import SearchEmpty from "./SearchEmpty";
 import SearchInput from "./SearchInput";
 import SearchSection from "./SearchSection";
@@ -18,9 +19,29 @@ export default function Search() {
 				<div className="">
 					<SearchTabs activeIndex={activeIndex} setActiveIndex={setActiveIndex}>
 						<SearchTabs.Tab title="전체">
-							<SearchSection title="스페이스">asd</SearchSection>
-
-							<SearchEmpty />
+							<div className="px-[20px]">
+								<SearchSection title="회고록">
+									{[1, 2, 3].map(el => (
+										<Memoir
+											key={el}
+											dateTime="2021-09-22"
+											project="project"
+											search={
+												<span>
+													<span className="text-tertiary">UX</span> 플젝
+												</span>
+											}
+											category="category"
+											content="content"
+										/>
+									))}
+								</SearchSection>
+								<hr />
+								<SearchSection title="태그">태그</SearchSection>
+								<hr />
+								<SearchSection title="스페이스">스페이스</SearchSection>
+								<SearchEmpty />
+							</div>
 						</SearchTabs.Tab>
 						<SearchTabs.Tab title="회고록">
 							<SearchSection title="스페이스">asd</SearchSection>
