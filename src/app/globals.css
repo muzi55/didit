@@ -122,7 +122,10 @@
   --alert-warning: #FFC98D;
   --alert-danger: #FF5E5E;
 
-  --button-blue: #007BFF
+  /* -- etc -- */
+  --button-blue: #007BFF;
+  --search-datetime: #2C2C2E;  
+  --search-project: #828286;
 }
 
 body {
