@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
+import Tag from "../common/tag/Tag";
 import SearchEmpty from "./SearchEmpty";
 import SearchItem from "./SearchItem";
 import SearchSection from "./SearchSection";
 import { SearchTabs } from "./SearchTabs";
+import TagSearch from "./TagSearch";
 
 export default function Search() {
 	const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -30,7 +32,32 @@ export default function Search() {
 							))}
 						</SearchSection>
 						<hr />
-						<SearchSection title="태그">태그</SearchSection>
+						<SearchSection title="태그">
+							{[1, 2, 3].map(el => (
+								<TagSearch
+									key={el}
+									dateTime="2021-09-22"
+									project="project"
+									search={
+										<span>
+											<span className="text-tertiary">UX</span> 플젝
+										</span>
+									}
+									category="category"
+									content="content"
+									TagList={
+										<div className="flex gap-[8px]">
+											<Tag onClick={() => {}} type="hightLight" icon={false}>
+												#UX
+											</Tag>
+											<Tag onClick={() => {}} type="remove" icon={false}>
+												#UI
+											</Tag>
+										</div>
+									}
+								/>
+							))}
+						</SearchSection>
 						<hr />
 						<SearchSection title="스페이스">스페이스</SearchSection>
 						<SearchEmpty />

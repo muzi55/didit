@@ -1,14 +1,8 @@
 import React from "react";
 
 import { DateTimeAndProject } from "./DateTimeAndProject";
+import type { SearchItemProps } from "./searchType";
 
-interface SearchItemProps {
-	dateTime: string;
-	project: string;
-	search: string | React.ReactNode;
-	category: string;
-	content: string;
-}
 export default function SearchItem({
 	dateTime,
 	project,
