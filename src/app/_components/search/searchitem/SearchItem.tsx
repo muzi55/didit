@@ -8,16 +8,14 @@ export default function SearchItem({
 	dateTime,
 	project,
 	search,
+	hightLight,
 	category,
 	content,
 }: SearchItemProps) {
 	return (
 		<div className="flex flex-col gap-[8px]">
 			<DateTimeAndProject dateTime={dateTime} project={project} />
-			<SearchProjectName>{search}</SearchProjectName>
-			{/* <h4 className="text-bodySmall500">
-				{search}
-			</h4> */}
+			<SearchProjectName search={search} hightLight={hightLight} />
 			<div className="text-dark-4 text-bodyExtraSmall400">
 				<p>{category}</p>
 				<p className="line-clamp-2">{content}</p>

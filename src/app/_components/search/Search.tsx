@@ -22,11 +22,8 @@ export default function Search() {
 									key={el}
 									dateTime="2021-09-22"
 									project="project"
-									search={
-										<span>
-											<span className="text-tertiary">UX</span> 플젝
-										</span>
-									}
+									search="UX 플젝"
+									hightLight="UX"
 									category="category"
 									content="content"
 								/>
@@ -37,13 +34,10 @@ export default function Search() {
 							{[1, 2, 3].map(el => (
 								<TagSearch
 									key={el}
+									search="UX"
+									hightLight="UX"
 									dateTime="2021-09-22"
 									project="project"
-									search={
-										<span>
-											<span className="text-tertiary">UX</span> 플젝
-										</span>
-									}
 									category="category"
 									content="content"
 									TagList={

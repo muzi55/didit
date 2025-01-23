@@ -10,6 +10,7 @@ export default function TagSearch({
 	category,
 	content,
 	TagList,
+	hightLight,
 }: TagSearchProps) {
 	return (
 		<div>
@@ -19,6 +20,7 @@ export default function TagSearch({
 				search={search}
 				category={category}
 				content={content}
+				hightLight={hightLight}
 			/>
 
 			<div className="flex gap-[8px] mt-[8px]">{TagList}</div>
