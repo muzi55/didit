@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
+import SearchWord from "@/app/_components/search/result/SearchWord";
 import SearchInput from "@/app/_components/search/SearchInput";
 import { SearchTabs } from "@/app/_components/search/SearchTabs";
 import DecorationProvider from "@/stories/DecorationProvider";
@@ -50,6 +51,14 @@ const meta = {
 		setActiveIndex: {
 			description:
 				"액티브 버튼의 인덱스를 변경하는 함수 / React.Dispatch<React.SetStateAction<number>>",
+		},
+		type: {
+			description: "기본 검색인지, 검색 결과 분기 타입 default | result",
+			control: {
+				type: "select",
+				options: ["default", "result"],
+			},
+			default: "default",
 		},
 	},
 
@@ -104,5 +113,29 @@ export const ActiveSecondTab: Story = {
 		setActiveIndex: fn(),
 
 		searchHeader: <SearchInput />,
+	},
+};
+
+export const ResultTab: Story = {
+	args: {
+		children: [
+			<SearchTabs.Tab key="0" title="전체">
+				전체
+			</SearchTabs.Tab>,
+			<SearchTabs.Tab key="1" title="회고록">
+				회고록
+			</SearchTabs.Tab>,
+			<SearchTabs.Tab key="2" title="태그">
+				태그
+			</SearchTabs.Tab>,
+			<SearchTabs.Tab key="3" title="스페이스">
+				스페이스
+			</SearchTabs.Tab>,
+		],
+		activeIndex: 1,
+		setActiveIndex: fn(),
+		type: "result",
+
+		searchHeader: <SearchWord word={"UX"} />,
 	},
 };
