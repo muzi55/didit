@@ -21,7 +21,7 @@ export default function Search() {
 							{[1, 2, 3].map(el => (
 								<SearchItem
 									key={el}
-									dateTime="2021-09-22"
+									dateTime={new Date()}
 									project="project"
 									search="UX 플젝"
 									hightLight="UX"
@@ -37,7 +37,7 @@ export default function Search() {
 									key={el}
 									search="UX"
 									hightLight="UX"
-									dateTime="2021-09-22"
+									dateTime={new Date()}
 									project="project"
 									category="category"
 									content="content"

@@ -5,10 +5,10 @@ interface SearchProjectNameProps {
 	hightLight: string;
 }
 
-const SearchProjectName: React.FC<SearchProjectNameProps> = ({
+export const SearchProjectName = ({
 	search,
 	hightLight,
-}) => {
+}: SearchProjectNameProps) => {
 	const replaceSearch = (search: string, hightLight: string) => {
 		return search.replace(
 			new RegExp(`(${hightLight})`, "g"),

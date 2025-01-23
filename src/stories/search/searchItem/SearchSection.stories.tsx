@@ -57,7 +57,7 @@ export const MemoirSection: Story = {
 		children: [
 			<SearchItem
 				key={1}
-				dateTime="2021-09-22"
+				dateTime={new Date()}
 				project="project"
 				search="UX 플젝"
 				hightLight="UX"
@@ -66,7 +66,7 @@ export const MemoirSection: Story = {
 			/>,
 			<SearchItem
 				key={2}
-				dateTime="2021-09-22"
+				dateTime={new Date()}
 				project="project"
 				search="UX 플젝"
 				hightLight="UX"
@@ -75,7 +75,7 @@ export const MemoirSection: Story = {
 			/>,
 			<SearchItem
 				key={3}
-				dateTime="2021-09-22"
+				dateTime={new Date()}
 				project="project"
 				search="UX 플젝"
 				hightLight="UX"
@@ -94,7 +94,7 @@ export const TagSection: Story = {
 				key={1}
 				search="UX"
 				hightLight="UX"
-				dateTime="2021-09-22"
+				dateTime={new Date()}
 				project="project"
 				category="category"
 				content="content"
@@ -113,7 +113,7 @@ export const TagSection: Story = {
 				key={2}
 				search="UX"
 				hightLight="UX"
-				dateTime="2021-09-22"
+				dateTime={new Date()}
 				project="project"
 				category="category"
 				content="content"
@@ -132,7 +132,7 @@ export const TagSection: Story = {
 				key={3}
 				search="UX"
 				hightLight="UX"
-				dateTime="2021-09-22"
+				dateTime={new Date()}
 				project="project"
 				category="category"
 				content="content"
