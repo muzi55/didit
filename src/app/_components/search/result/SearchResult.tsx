@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 import Tag from "../../common/tag/Tag";
+import { 시간변수 } from "../constant";
 import SearchEmpty from "../SearchEmpty";
 import SearchItem from "../searchitem/SearchItem";
 import SearchSpaceItem from "../searchitem/SearchSpaceItem";
@@ -14,7 +15,6 @@ import SearchWord from "./SearchWord";
 export default function SearchResult() {
 	const [activeIndex, setActiveIndex] = useState<number>(0);
 
-	const 시간변수 = "Thu Jan 25 2025 19:44:57 GMT+0900 (한국 표준시)";
 	return (
 		<div>
 			<SearchTabs

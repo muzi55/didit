@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import Tag from "../common/tag/Tag";
+import { 시간변수 } from "./constant";
 import SearchEmpty from "./SearchEmpty";
 import SearchInput from "./SearchInput";
 import SearchItem from "./searchitem/SearchItem";
@@ -13,7 +14,6 @@ import TagSearch from "./TagSearch";
 export default function Search() {
 	const [activeIndex, setActiveIndex] = useState<number>(0);
 
-	const 시간변수 = "Thu Jan 25 2025 19:44:57 GMT+0900 (한국 표준시)";
 	return (
 		<div className="max-w-[854px] w-[100dvh] min-w-[340px] min-h-[294px]">
 			<div className="">

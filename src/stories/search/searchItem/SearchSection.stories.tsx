@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Tag from "@/app/_components/common/tag/Tag";
+import { 시간변수 } from "@/app/_components/search/constant";
 import SearchEmpty from "@/app/_components/search/SearchEmpty";
 import SearchItem from "@/app/_components/search/searchitem/SearchItem";
 import SearchSpaceItem from "@/app/_components/search/searchitem/SearchSpaceItem";
@@ -57,7 +58,7 @@ export const MemoirSection: Story = {
 		children: [
 			<SearchItem
 				key={1}
-				dateTime={new Date()}
+				dateTime={시간변수}
 				project="project"
 				search="UX 플젝"
 				hightLight="UX"
@@ -66,7 +67,7 @@ export const MemoirSection: Story = {
 			/>,
 			<SearchItem
 				key={2}
-				dateTime={new Date()}
+				dateTime={시간변수}
 				project="project"
 				search="UX 플젝"
 				hightLight="UX"
@@ -75,7 +76,7 @@ export const MemoirSection: Story = {
 			/>,
 			<SearchItem
 				key={3}
-				dateTime={new Date()}
+				dateTime={시간변수}
 				project="project"
 				search="UX 플젝"
 				hightLight="UX"
@@ -94,7 +95,7 @@ export const TagSection: Story = {
 				key={1}
 				search="UX"
 				hightLight="UX"
-				dateTime={new Date()}
+				dateTime={시간변수}
 				project="project"
 				category="category"
 				content="content"
@@ -113,7 +114,7 @@ export const TagSection: Story = {
 				key={2}
 				search="UX"
 				hightLight="UX"
-				dateTime={new Date()}
+				dateTime={시간변수}
 				project="project"
 				category="category"
 				content="content"
@@ -132,7 +133,7 @@ export const TagSection: Story = {
 				key={3}
 				search="UX"
 				hightLight="UX"
-				dateTime={new Date()}
+				dateTime={시간변수}
 				project="project"
 				category="category"
 				content="content"
@@ -158,19 +159,19 @@ export const SpaceSection: Story = {
 				key="1"
 				search="UX 플젝"
 				hightLight="UX"
-				projectDate={{ startDate: new Date() }}
+				projectDate={{ startDate: 시간변수 }}
 			/>,
 			<SearchSpaceItem
 				key="2"
 				search="UX 플젝"
 				hightLight="UX"
-				projectDate={{ startDate: new Date() }}
+				projectDate={{ startDate: 시간변수 }}
 			/>,
 			<SearchSpaceItem
 				key="3"
 				search="UX 플젝"
 				hightLight="UX"
-				projectDate={{ startDate: new Date(), endDate: new Date() }}
+				projectDate={{ startDate: 시간변수, endDate: 시간변수 }}
 			/>,
 		],
 		title: "스페이스",

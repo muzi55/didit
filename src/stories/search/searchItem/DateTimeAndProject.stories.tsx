@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { 시간변수 } from "@/app/_components/search/constant";
 import { DateTimeAndProject } from "@/app/_components/search/DateTimeAndProject";
 import DecorationProvider from "@/stories/DecorationProvider";
 
@@ -17,15 +18,12 @@ const meta: Meta<typeof DateTimeAndProject> = {
 	],
 
 	argTypes: {
-		// dateTime,
-		// project,
-
 		dateTime: {
 			description: "날짜",
 			control: {
 				type: "text",
 			},
-			default: new Date(),
+			default: 시간변수,
 		},
 		project: {
 			description: "프로젝트",
@@ -42,7 +40,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		dateTime: new Date(),
+		dateTime: 시간변수,
 		project: "UX 프로젝트",
 	},
 };
