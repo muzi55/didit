@@ -14,9 +14,10 @@ export interface TagSearchProps extends SearchItemProps {
 }
 
 export interface ISearchSpaceItem {
-	searchText: string;
-	projectDate?: {
-		startDate?: Date;
+	search: string;
+	hightLight: string;
+	projectDate: {
+		startDate: Date;
 		endDate?: Date;
 	};
 }

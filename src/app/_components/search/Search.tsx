@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 import Tag from "../common/tag/Tag";
@@ -55,12 +56,26 @@ export default function Search() {
 						</SearchSection>
 						<hr />
 						<SearchSection title="스페이스">
-							searchText, projectDate,
 							<SearchSpaceItem
-								searchText="UX 플젝"
+								search="UX 플젝"
+								hightLight="UX"
+								projectDate={{ startDate: new Date() }}
+							/>
+							<SearchSpaceItem
+								search="UX 플젝2"
+								hightLight="UX"
+								projectDate={{ startDate: new Date() }}
+							/>
+							<SearchSpaceItem
+								search="UX 플젝3"
+								hightLight="UX"
 								projectDate={{ startDate: new Date(), endDate: new Date() }}
 							/>
 						</SearchSection>
+
+						<Link href="/#" className="py-[8px] text-tertiary">
+							+ 검색 결과 더보기
+						</Link>
 						<SearchEmpty />
 					</SearchTabs.Tab>
 					<SearchTabs.Tab title="회고록">
