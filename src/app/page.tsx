@@ -4,10 +4,11 @@ import { useState } from "react";
 
 import Alarm from "./_components/alarm/Alarm";
 import Modal from "./_components/modal/Modal";
+import SearchResult from "./_components/search/result/SearchResult";
 import Search from "./_components/search/Search";
 
 export default function Home() {
-	const [active, setActive] = useState<boolean>(true);
+	const [active, setActive] = useState<boolean>(false);
 	const closeActive = () => {
 		setActive(false);
 	};
@@ -27,6 +28,7 @@ export default function Home() {
 					<Search />
 				</Modal>
 			)}
+			<SearchResult />
 			{/* <div className="absolute top-0 left-0 w-full h-full bg-[#20202020] z-10 flex justify-center items-center">
 				
 			</div> */}

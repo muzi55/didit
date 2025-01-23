@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import React from "react";
 
 import type { ISearchSpaceItem } from "../searchType";
@@ -14,13 +15,13 @@ export default function SearchSpaceItem({
 			<SearchProjectName search={search} hightLight={hightLight} />
 			<div className="flex text-bodyExtraSmall400">
 				<p>
-					<time dateTime={startDate.toISOString()}>
-						{startDate.toLocaleDateString()}
+					<time dateTime={dayjs(startDate).format("YYYY. MM. DD")}>
+						{dayjs(startDate).format("YYYY. MM. DD")}
 					</time>
 					&nbsp;~&nbsp;
 					{endDate && (
-						<time dateTime={endDate.toISOString()}>
-							{startDate.toLocaleDateString()}
+						<time dateTime={endDate}>
+							{dayjs(startDate).format("YYYY. MM. DD")}
 						</time>
 					)}
 				</p>

@@ -12,6 +12,7 @@ import TagSearch from "./TagSearch";
 export default function Search() {
 	const [activeIndex, setActiveIndex] = useState<number>(0);
 
+	const 시간변수 = "Thu Jan 25 2025 19:44:57 GMT+0900 (한국 표준시)";
 	return (
 		<div className="max-w-[854px] w-[100dvh] min-w-[340px] min-h-[294px]">
 			<div className="">
@@ -21,7 +22,7 @@ export default function Search() {
 							{[1, 2, 3].map(el => (
 								<SearchItem
 									key={el}
-									dateTime={new Date()}
+									dateTime={시간변수}
 									project="project"
 									search="UX 플젝"
 									hightLight="UX"
@@ -37,7 +38,7 @@ export default function Search() {
 									key={el}
 									search="UX"
 									hightLight="UX"
-									dateTime={new Date()}
+									dateTime={시간변수}
 									project="project"
 									category="category"
 									content="content"
@@ -59,17 +60,17 @@ export default function Search() {
 							<SearchSpaceItem
 								search="UX 플젝"
 								hightLight="UX"
-								projectDate={{ startDate: new Date() }}
+								projectDate={{ startDate: 시간변수 }}
 							/>
 							<SearchSpaceItem
 								search="UX 플젝2"
 								hightLight="UX"
-								projectDate={{ startDate: new Date() }}
+								projectDate={{ startDate: 시간변수 }}
 							/>
 							<SearchSpaceItem
 								search="UX 플젝3"
 								hightLight="UX"
-								projectDate={{ startDate: new Date(), endDate: new Date() }}
+								projectDate={{ startDate: 시간변수, endDate: 시간변수 }}
 							/>
 						</SearchSection>
 

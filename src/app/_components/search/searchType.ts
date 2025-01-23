@@ -1,7 +1,7 @@
 export type SearchCategory = "회고록" | "태그" | "스페이스";
 
 export interface SearchItemProps {
-	dateTime: Date;
+	dateTime: string;
 	project: string;
 	search: string;
 	category: string;
@@ -17,7 +17,7 @@ export interface ISearchSpaceItem {
 	search: string;
 	hightLight: string;
 	projectDate: {
-		startDate: Date;
-		endDate?: Date;
+		startDate: string;
+		endDate?: string;
 	};
 }

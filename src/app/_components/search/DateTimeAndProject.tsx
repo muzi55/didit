@@ -6,15 +6,12 @@ export function DateTimeAndProject({
 	dateTime,
 	project,
 }: {
-	dateTime: Date;
+	dateTime: string;
 	project: string;
 }) {
 	return (
 		<div className="flex text-bodyExtraSmall500 gap-[10px]">
-			<time
-				className="text-[var(--search-datetime)]"
-				dateTime={dateTime.toISOString()}
-			>
+			<time className="text-[var(--search-datetime)]" dateTime={dateTime}>
 				{dayjs().format("YYYY. MM. DD")}
 			</time>
 			<p className="text-bodyExtraSmall400 text-[var(--search-project)]">
