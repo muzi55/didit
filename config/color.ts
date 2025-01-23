@@ -2,6 +2,7 @@ const colors = {
 	primary: {
 		DEFAULT: "var(--primary)",
 		dark: "var(--primary-dark)",
+		"50": "var(--primary-50)",
 	},
 	secondary: {
 		DEFAULT: "var(--secondary)",
