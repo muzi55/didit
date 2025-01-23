@@ -1,7 +1,8 @@
 import React from "react";
 
-import { DateTimeAndProject } from "./DateTimeAndProject";
-import type { SearchItemProps } from "./searchType";
+import { DateTimeAndProject } from "../DateTimeAndProject";
+import type { SearchItemProps } from "../searchType";
+import SearchProjectName from "./SearchProjectName";
 
 export default function SearchItem({
 	dateTime,
@@ -13,10 +14,10 @@ export default function SearchItem({
 	return (
 		<div className="flex flex-col gap-[8px]">
 			<DateTimeAndProject dateTime={dateTime} project={project} />
-			<h4 className="text-bodySmall500">
-				{/* <span className="text-tertiary">UX</span> 플젝 */}
+			<SearchProjectName>{search}</SearchProjectName>
+			{/* <h4 className="text-bodySmall500">
 				{search}
-			</h4>
+			</h4> */}
 			<div className="text-dark-4 text-bodyExtraSmall400">
 				<p>{category}</p>
 				<p className="line-clamp-2">{content}</p>

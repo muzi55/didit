@@ -11,3 +11,11 @@ export interface SearchItemProps {
 export interface TagSearchProps extends SearchItemProps {
 	TagList: React.ReactNode;
 }
+
+export interface ISearchSpaceItem {
+	searchText: string;
+	projectDate?: {
+		startDate?: Date;
+		endDate?: Date;
+	};
+}

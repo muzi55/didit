@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import Tag from "../common/tag/Tag";
 import SearchEmpty from "./SearchEmpty";
-import SearchItem from "./SearchItem";
+import SearchItem from "./searchitem/SearchItem";
+import SearchSpaceItem from "./searchitem/SearchSpaceItem";
 import SearchSection from "./SearchSection";
 import { SearchTabs } from "./SearchTabs";
 import TagSearch from "./TagSearch";
@@ -59,7 +60,13 @@ export default function Search() {
 							))}
 						</SearchSection>
 						<hr />
-						<SearchSection title="스페이스">스페이스</SearchSection>
+						<SearchSection title="스페이스">
+							searchText, projectDate,
+							<SearchSpaceItem
+								searchText="UX 플젝"
+								projectDate={{ startDate: new Date(), endDate: new Date() }}
+							/>
+						</SearchSection>
 						<SearchEmpty />
 					</SearchTabs.Tab>
 					<SearchTabs.Tab title="회고록">

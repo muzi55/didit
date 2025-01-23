@@ -1,6 +1,6 @@
 import React from "react";
 
-import SearchItem from "./SearchItem";
+import SearchItem from "./searchitem/SearchItem";
 import type { TagSearchProps } from "./searchType";
 
 export default function TagSearch({
