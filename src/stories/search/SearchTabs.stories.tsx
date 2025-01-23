@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
+import SearchInput from "@/app/_components/search/SearchInput";
 import { SearchTabs } from "@/app/_components/search/SearchTabs";
 import DecorationProvider from "@/stories/DecorationProvider";
 
@@ -78,6 +79,8 @@ export const Default: Story = {
 		],
 		activeIndex: 0,
 		setActiveIndex: fn(),
+
+		searchHeader: <SearchInput />,
 	},
 };
 
@@ -99,5 +102,7 @@ export const ActiveSecondTab: Story = {
 		],
 		activeIndex: 1,
 		setActiveIndex: fn(),
+
+		searchHeader: <SearchInput />,
 	},
 };

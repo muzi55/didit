@@ -1,6 +1,5 @@
 import React from "react";
 
-import SearchInput from "./SearchInput";
 import { SearchTab } from "./SearchTab";
 
 interface IChildProps {
@@ -10,19 +9,19 @@ interface ITabProps {
 	children: React.ReactElement<IChildProps>[];
 	activeIndex: number;
 	setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
+	searchHeader?: React.ReactNode;
 }
 
 export const SearchTabs = ({
 	children,
 	activeIndex,
 	setActiveIndex,
+	searchHeader,
 }: ITabProps) => {
 	return (
 		<div className="">
 			<div className="sticky pt-[21px] top-0 flex flex-col gap-[5px] px-[30px] border-b pb-[10px] bg-white">
-				<div className="mb-[18px]">
-					<SearchInput />
-				</div>
+				<div className="mb-[18px]">{searchHeader}</div>
 				<div>
 					{React.Children.map(children, (child, index) => {
 						const activeItemStyle =

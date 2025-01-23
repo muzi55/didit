@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import Tag from "../common/tag/Tag";
 import SearchEmpty from "./SearchEmpty";
+import SearchInput from "./SearchInput";
 import SearchItem from "./searchitem/SearchItem";
 import SearchSpaceItem from "./searchitem/SearchSpaceItem";
 import SearchSection from "./SearchSection";
@@ -16,7 +17,11 @@ export default function Search() {
 	return (
 		<div className="max-w-[854px] w-[100dvh] min-w-[340px] min-h-[294px]">
 			<div className="">
-				<SearchTabs activeIndex={activeIndex} setActiveIndex={setActiveIndex}>
+				<SearchTabs
+					activeIndex={activeIndex}
+					setActiveIndex={setActiveIndex}
+					searchHeader={<SearchInput />}
+				>
 					<SearchTabs.Tab title="전체">
 						<SearchSection title="회고록">
 							{[1, 2, 3].map(el => (
