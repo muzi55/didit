@@ -44,9 +44,7 @@ export default function SpaceCardSection({
 			</div>
 
 			<ul className="flex flex-wrap gap-[24px]">
-				{/* <WriteSpaceCard href="#" /> */}
-
-				{cardList.length <= 4 ? (
+				{cardList.length < 4 ? (
 					<>
 						{cardList.map((el: SpaceCardList) => (
 							<li className="w-[306px] h-[242px]" key={el.title}>
@@ -67,18 +65,21 @@ export default function SpaceCardSection({
 						))}
 					</>
 				) : (
-					cardList.map((el: SpaceCardList) => (
-						<li className="w-[306px] h-[242px]" key={el.title}>
-							<DailyCard>
-								<DailyCard.Header>{el.title}</DailyCard.Header>
-								<DailyCard.Body>{el.content}</DailyCard.Body>
-								<DailyCard.TagList
-									viewFirstTag={false}
-									listItem={TagSliceFn(el.tagList)}
-								/>
-							</DailyCard>
-						</li>
-					))
+					<>
+						{cardList.map((el: SpaceCardList) => (
+							<li className="w-[306px] h-[242px]" key={el.title}>
+								<DailyCard>
+									<DailyCard.Header>{el.title}</DailyCard.Header>
+									<DailyCard.Body>{el.content}</DailyCard.Body>
+									<DailyCard.TagList
+										viewFirstTag={false}
+										listItem={TagSliceFn(el.tagList)}
+									/>
+								</DailyCard>
+							</li>
+						))}
+						<WriteSpaceCard href="#" />
+					</>
 				)}
 			</ul>
 		</div>
