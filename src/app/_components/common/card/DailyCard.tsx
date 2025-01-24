@@ -10,7 +10,7 @@ interface DailyCardProps {
 
 export default function DailyCard({ children }: DailyCardProps) {
 	return (
-		<div className="w-full rounded-2xl overflow-hidden shadow-shadow3">
+		<div className="flex flex-col w-full rounded-2xl overflow-hidden shadow-shadow3 h-[242px]">
 			{children}
 		</div>
 	);

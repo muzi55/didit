@@ -21,7 +21,17 @@ export default function Home() {
 		{
 			id: "1",
 			title: "스페이스1",
-			content: "스페이스1 내용",
+			content: `
+			<p>12</p>
+			<p>123</p>
+			<p>124</p>
+			<p>125</p>
+			<p>126</p>
+			<p>127</p>
+			<p>128</p>
+			<p>1298</p>
+			<p>120002</p>
+		`,
 			tagList: [
 				{
 					label: "태그1",
