@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import CardBookMark from "./_components/common/card/CardBookMark";
 import DailyCard from "./_components/common/card/DailyCard";
 import TitleHeading from "./_components/common/heding/TitleHeading";
 import Space from "./_components/space/Space";
@@ -59,6 +60,8 @@ export default function Home() {
 
 			<button onClick={openActive}>모달 열기</button>
 			<TitleHeading>전체 스페이스</TitleHeading>
+			<CardBookMark active={false}>카드북마크</CardBookMark>
+
 			<DailyCard>
 				<DailyCard.Header>헤더</DailyCard.Header>
 				<DailyCard.Body>바디</DailyCard.Body>
