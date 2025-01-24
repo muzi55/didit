@@ -43,22 +43,43 @@ export default function SpaceCardSection({
 				</button>
 			</div>
 
-			<WriteSpaceCard href="#" />
-
 			<ul className="flex flex-wrap gap-[24px]">
-				{cardList.map((el: SpaceCardList) => (
-					<li className="min-w-[306px] h-[242px]" key={el.title}>
-						<DailyCard>
-							<DailyCard.Header>{el.title}</DailyCard.Header>
-							<DailyCard.Body>{el.content}</DailyCard.Body>
-							{/* 여기서는 2개의 List만 내려주기 */}
-							<DailyCard.TagList
-								viewFirstTag={false}
-								listItem={TagSliceFn(el.tagList)}
-							/>
-						</DailyCard>
-					</li>
-				))}
+				{/* <WriteSpaceCard href="#" /> */}
+
+				{cardList.length <= 4 ? (
+					<>
+						{cardList.map((el: SpaceCardList) => (
+							<li className="w-[306px] h-[242px]" key={el.title}>
+								<DailyCard>
+									<DailyCard.Header>{el.title}</DailyCard.Header>
+									<DailyCard.Body>{el.content}</DailyCard.Body>
+									<DailyCard.TagList
+										viewFirstTag={false}
+										listItem={TagSliceFn(el.tagList)}
+									/>
+								</DailyCard>
+							</li>
+						))}
+						{Array.from({ length: 4 - cardList.length }).map((_, index) => (
+							<li className="w-[306px] h-[242px]" key={`placeholder-${index}`}>
+								<WriteSpaceCard href="#" />
+							</li>
+						))}
+					</>
+				) : (
+					cardList.map((el: SpaceCardList) => (
+						<li className="w-[306px] h-[242px]" key={el.title}>
+							<DailyCard>
+								<DailyCard.Header>{el.title}</DailyCard.Header>
+								<DailyCard.Body>{el.content}</DailyCard.Body>
+								<DailyCard.TagList
+									viewFirstTag={false}
+									listItem={TagSliceFn(el.tagList)}
+								/>
+							</DailyCard>
+						</li>
+					))
+				)}
 			</ul>
 		</div>
 	);
@@ -68,7 +89,7 @@ const WriteSpaceCard = ({ href }: { href: string }) => {
 	return (
 		<Link
 			href={href}
-			className={`rounded-[16px] flex justify-center items-center max-w-[306px] h-[242px]`}
+			className={`rounded-[16px] flex justify-center items-center w-[306px] h-[242px]`}
 			style={{
 				backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23E8E8E8FF' stroke-width='4' stroke-dasharray='5%2c 8' stroke-dashoffset='33' stroke-linecap='square'/%3e%3c/svg%3e")`,
 				borderRadius: `16px`,
