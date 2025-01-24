@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import CardBookMark from "./_components/common/card/CardBookMark";
-import DailyCard from "./_components/common/card/DailyCard";
 import TitleHeading from "./_components/common/heding/TitleHeading";
 import Space from "./_components/space/Space";
+import SpaceCardSection from "./_components/space/SpaceCardSection";
+import { spaceTagList } from "./_components/space/SpaceConstant";
 
 export default function Home() {
 	const [active, setActive] = useState<boolean>(false);
@@ -16,43 +16,6 @@ export default function Home() {
 	const openActive = () => {
 		setActive(true);
 	};
-	interface TagListProps {
-		label: string;
-		onClick: () => void;
-	}
-
-	const tagList = [
-		{
-			label: "태그1",
-			onClick: () => {
-				console.log("태그1");
-			},
-		},
-		{
-			label: "태그2",
-			onClick: () => {
-				console.log("태그2");
-			},
-		},
-		{
-			label: "태그3",
-			onClick: () => {
-				console.log("태그3");
-			},
-		},
-	];
-
-	const TagSliceFn = (arr: TagListProps[]): TagListProps[] => {
-		const sliceArr = arr.slice(0, 2);
-		const newItem = {
-			label: "...",
-			onClick: () => {
-				console.log("...");
-			},
-		};
-		const newArr = [...sliceArr, newItem];
-		return newArr;
-	};
 
 	return (
 		<>
@@ -60,17 +23,8 @@ export default function Home() {
 
 			<button onClick={openActive}>모달 열기</button>
 			<TitleHeading>전체 스페이스</TitleHeading>
-			<CardBookMark active={false}>카드북마크</CardBookMark>
 
-			<DailyCard>
-				<DailyCard.Header>헤더</DailyCard.Header>
-				<DailyCard.Body>바디</DailyCard.Body>
-				{/* 여기서는 2개의 List만 내려주기 */}
-				<DailyCard.TagList
-					viewFirstTag={false}
-					listItem={TagSliceFn(tagList)}
-				/>
-			</DailyCard>
+			<SpaceCardSection title="DIDIT" cardList={spaceTagList} />
 			<Space />
 
 			<hr />
