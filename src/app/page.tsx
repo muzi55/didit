@@ -5,7 +5,7 @@ import { useState } from "react";
 import TitleHeading from "./_components/common/heding/TitleHeading";
 import Space from "./_components/space/Space";
 import SpaceCardSection from "./_components/space/SpaceCardSection";
-import { spaceTagList } from "./_components/space/SpaceConstant";
+import type { SpaceCardList } from "./_components/space/spaceType";
 
 export default function Home() {
 	const [active, setActive] = useState<boolean>(false);
@@ -17,6 +17,73 @@ export default function Home() {
 		setActive(true);
 	};
 
+	const cardSectionList: SpaceCardList[] = [
+		{
+			id: "1",
+			title: "스페이스1",
+			content: "스페이스1 내용",
+			tagList: [
+				{
+					label: "태그1",
+					onClick: () => {
+						console.log();
+					},
+				},
+				{
+					label: "태그2",
+					onClick: () => {
+						console.log();
+					},
+				},
+				{
+					label: "태그3",
+					onClick: () => {
+						console.log();
+					},
+				},
+			],
+		},
+		{
+			id: "2",
+			title: "스페이스2",
+			content: "스페이스2 내용",
+			tagList: [
+				{
+					label: "태그1",
+					onClick: () => {
+						console.log();
+					},
+				},
+
+				{
+					label: "태그3",
+					onClick: () => {
+						console.log();
+					},
+				},
+			],
+		},
+		{
+			id: "3",
+			title: "스페이스3",
+			content: "스페이스3 내용",
+			tagList: [
+				{
+					label: "태그1",
+					onClick: () => {
+						console.log();
+					},
+				},
+			],
+		},
+		{
+			id: "4",
+			title: "스페이스4",
+			content: "스페이스4 내용",
+			tagList: [],
+		},
+	];
+
 	return (
 		<>
 			<div>test</div>
@@ -24,7 +91,7 @@ export default function Home() {
 			<button onClick={openActive}>모달 열기</button>
 			<TitleHeading>전체 스페이스</TitleHeading>
 
-			<SpaceCardSection title="DIDIT" cardList={spaceTagList} />
+			<SpaceCardSection title="DIDIT" cardList={cardSectionList} />
 			<Space />
 
 			<hr />
