@@ -2,9 +2,8 @@ import { icons } from "@/shared/libs/common/icons";
 
 import Button from "../common/Button";
 
+// TODO 추후 버튼 클릭 이벤트 페러렐라우트 + 인터셉트 라우트로 교체하기
 export const CreateNewSpace = () => {
-	// background: linear-gradient(183deg, #F3F4F6 2.06%, #D0D0D0 168.9%);
-
 	return (
 		<div className="w-full py-[78px] rounded-[16px] rounded-[16px] text-center bg-gradient-to-br from-[#F3F4F6] to-[#D0D0D0] mt-[43px]">
 			<h4 className="text-bodyLarge700">
