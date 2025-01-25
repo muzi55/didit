@@ -16,8 +16,8 @@ export default function SelectBox({
 	size = "medium",
 }: SelectBoxProps) {
 	const sizeClasses = {
-		small: "w-[67px] px-[10px] py-[12px]",
-		medium: "w-[210px] px-[20px] py-[12px]",
+		small: "w-[67px] px-[10px] py-[9px]",
+		medium: "w-[210px] px-[20px] py-[9px]",
 	};
 
 	const iconSize =
@@ -29,7 +29,7 @@ export default function SelectBox({
 				onClick={setOpen}
 				className={`flex justify-between items-center border border-stroke rounded-md ${sizeClasses[size]}`}
 			>
-				<p>{title}</p>
+				<p className="text-bodySmall400">{title}</p>
 				<span className="rotate-180">{iconSize}</span>
 			</button>
 

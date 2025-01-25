@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import TitleHeading from "./_components/common/heding/TitleHeading";
 import Space from "./_components/space/Space";
+import WriteForm from "./_components/write/WriteForm";
 
 export default function Home() {
 	const [active, setActive] = useState<boolean>(false);
@@ -18,6 +19,8 @@ export default function Home() {
 	return (
 		<>
 			<div>test</div>
+
+			<WriteForm />
 
 			<button onClick={openActive}>모달 열기</button>
 			<TitleHeading>전체 스페이스</TitleHeading>
