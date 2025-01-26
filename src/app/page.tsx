@@ -4,8 +4,10 @@ import dayjs from "dayjs";
 import { useState } from "react";
 
 import TitleHeading from "./_components/common/heding/TitleHeading";
+import { 시간변수 } from "./_components/search/constant";
 import Space from "./_components/space/Space";
-import CalendarUI from "./_components/write/WriteCalendar";
+import SpaceDetailHead from "./_components/space/SpaceDetailHead";
+import CalendarUI from "./_components/space/WriteCalendar";
 import WriteForm from "./_components/write/WriteForm";
 
 export default function Home() {
@@ -26,6 +28,7 @@ export default function Home() {
 		<>
 			<div>test</div>
 
+			<SpaceDetailHead date={new Date(시간변수)} startIt={new Date(시간변수)} />
 			<CalendarUI
 				year={year}
 				setYear={setYear}
