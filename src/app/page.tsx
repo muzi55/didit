@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import TitleHeading from "./_components/common/heding/TitleHeading";
 import Space from "./_components/space/Space";
+import CalendarUI from "./_components/write/WriteCalendar";
 import WriteForm from "./_components/write/WriteForm";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
 		<>
 			<div>test</div>
 
+			<CalendarUI />
 			<WriteForm />
 
 			<button onClick={openActive}>모달 열기</button>
