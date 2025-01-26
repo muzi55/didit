@@ -1,5 +1,6 @@
 "use client";
 
+import dayjs from "dayjs";
 import { useState } from "react";
 
 import TitleHeading from "./_components/common/heding/TitleHeading";
@@ -17,11 +18,22 @@ export default function Home() {
 		setActive(true);
 	};
 
+	const [year, setYear] = useState(+dayjs().format("YYYY")); // 기본 연도
+	const [month, setMonth] = useState(+dayjs().format("MM") - 1); // 기본 월 (0-11)
+
+	// console.log(year, month);
 	return (
 		<>
 			<div>test</div>
 
-			<CalendarUI />
+			<CalendarUI
+				year={year}
+				setYear={setYear}
+				month={month}
+				setMonth={setMonth}
+				minYear={2021}
+				maxYear={2022}
+			/>
 			<WriteForm />
 
 			<button onClick={openActive}>모달 열기</button>

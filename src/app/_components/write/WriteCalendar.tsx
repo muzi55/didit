@@ -1,15 +1,26 @@
-import dayjs from "dayjs";
-import React, { useState } from "react";
+import React from "react";
 
 import { icons } from "@/shared/libs/common/icons";
 
-const CalendarUI = () => {
-	// const currentDay = dayjs().format("YYYY-MM-DD");
-	const currentDay = dayjs().format("YYYY");
-	const MIN_YEAR = 2020;
-	const MAX_YEAR = +currentDay;
-	const [year, setYear] = useState(+dayjs().format("YYYY")); // 기본 연도
-	const [month, setMonth] = useState(+dayjs().format("MM") - 1); // 기본 월 (0-11)
+interface CalendarUIProps {
+	year: number;
+	setYear: React.Dispatch<React.SetStateAction<number>>;
+	month: number;
+	setMonth: React.Dispatch<React.SetStateAction<number>>;
+	minYear: number;
+	maxYear: number;
+}
+
+const CalendarUI = ({
+	year,
+	setYear,
+	month,
+	setMonth,
+	minYear,
+	maxYear,
+}: CalendarUIProps) => {
+	const MIN_YEAR = minYear;
+	const MAX_YEAR = maxYear;
 
 	const months = [
 		"1월",
@@ -52,7 +63,7 @@ const CalendarUI = () => {
 				<button
 					className="text-gray-500 hover:text-black rotate-180"
 					onClick={handlePrevYear}
-					disabled={year <= MIN_YEAR}
+					disabled={year < MIN_YEAR}
 				>
 					{icons.angleRight(
 						year <= MIN_YEAR
@@ -63,26 +74,20 @@ const CalendarUI = () => {
 
 				<button
 					onClick={handlePrevYear}
-					className={`${year === MIN_YEAR ? "text-textColor" : ""}`}
+					className={`${year - 1 < MIN_YEAR ? "text-dark-5" : "text-textColor"}`}
+					disabled={year - 1 < MIN_YEAR}
 				>
-					{year - 1}
+					{year - 1 < MIN_YEAR ? year - 1 : year - 1}
 				</button>
-				<button
-					className={`${year !== MIN_YEAR && year !== MAX_YEAR ? "text-textColor" : ""}`}
-				>
-					{year}
-				</button>
+				<button className="text-textColor">{year}</button>
 				<button
 					onClick={handleNextYear}
-					className={`${year === MAX_YEAR ? "text-textColor" : ""}`}
+					className={`${year + 1 > MAX_YEAR ? "text-dark-5" : "text-textColor"}`}
+					disabled={year + 1 > MAX_YEAR}
 				>
-					{year + 1}
+					{year + 1 > MAX_YEAR ? year + 1 : year + 1}
 				</button>
-				<button
-					className="text-gray-500 hover:text-black"
-					onClick={handleNextYear}
-					disabled={year >= MAX_YEAR}
-				>
+				<button onClick={handleNextYear} disabled={year >= MAX_YEAR}>
 					{icons.angleRight(
 						year >= MAX_YEAR
 							? calendarBtnStyle.disable
