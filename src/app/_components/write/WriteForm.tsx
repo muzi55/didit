@@ -3,12 +3,27 @@ import React, { useState } from "react";
 import { icons } from "@/shared/libs/common/icons";
 
 import Button from "../common/Button";
+import { DailyCardTagList } from "../common/card/DailyCardTagList";
 import SelectBox from "../common/selectbox/SelectBox";
 import SelectBoxInfo from "../common/selectbox/SelectBoxInfo";
 import SelectBoxItem from "../common/selectbox/SelectBoxItem";
 import SelectBoxList from "../common/selectbox/SelectBoxList";
 
-export default function WriteForm() {
+const tagList = [
+	{
+		label: "tag1",
+		onClick: () => {},
+	},
+	{
+		label: "tag2",
+		onClick: () => {},
+	},
+	{
+		label: "tag3",
+		onClick: () => {},
+	},
+];
+export default function WriteForm({}) {
 	interface SelectState {
 		spaceState: boolean;
 		templateState: boolean;
@@ -74,7 +89,27 @@ export default function WriteForm() {
 					<button>{icons.closeUp}</button>
 				</div>
 			</div>
-			<div>body</div>
+			<div className="relative">
+				<textarea
+					className="placeholder:text-h5 w-full min-h-[300px] px-[31px] py-[19px]"
+					name="createWrite"
+					id="createWrite"
+					placeholder="스페이스와 템플릿을 선택해 작성해보세요!"
+				></textarea>
+			</div>
+			<div className="flex justify-between items-center">
+				<div className="pt-[24px]">
+					<DailyCardTagList listItem={tagList} />
+				</div>
+				<div className="flex gap-[11px]">
+					<Button color={"white"} onClick={() => {}}>
+						취소하기
+					</Button>
+					<Button color={"secondary"} onClick={() => {}}>
+						등록하기
+					</Button>
+				</div>
+			</div>
 		</div>
 	);
 }
