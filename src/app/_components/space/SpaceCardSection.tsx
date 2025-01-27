@@ -4,23 +4,10 @@ import React from "react";
 import { icons } from "@/shared/libs/common/icons";
 
 import CardBookMark from "../common/card/CardBookMark";
-import type { CardTagList } from "../common/card/cardType";
 import DailyCard from "../common/card/DailyCard";
 import type { SpaceCardList } from "./spaceType";
+import { TagSliceFn } from "./spaceUtils";
 // SpaceCardTagList
-
-const TagSliceFn = (arr: CardTagList[]): CardTagList[] => {
-	if (arr.length <= 2) return arr;
-
-	const sliceArr = arr.slice(0, 2);
-	const newItem = {
-		label: "...",
-		onClick: () => {
-			console.log("...");
-		},
-	};
-	return sliceArr.concat(newItem);
-};
 
 interface SpaceCardSectionProps {
 	title: string;
