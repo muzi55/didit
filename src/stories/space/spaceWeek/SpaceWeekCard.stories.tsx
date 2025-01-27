@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
-import { cardSectionList, newSpaceList } from "../SpaceConstant";
-import SpaceWeekCard from "./SpaceWeekCard";
+import { newSpaceList } from "@/app/_components/space/SpaceConstant";
+import SpaceWeekCard from "@/app/_components/space/spaceWeek/SpaceWeekCard";
 
 const meta = {
 	title: "Space/SpaceWeekCard",
@@ -50,7 +50,7 @@ const meta = {
 							endAt: new Date(),
 						}}
 					/>
-					<SpaceWeekCard.Body cardList={cardSectionList} />
+					<SpaceWeekCard.Body cardList={newSpaceList(4)} />
 				</>
 			),
 		},
