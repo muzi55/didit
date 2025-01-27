@@ -6,9 +6,9 @@ import { useState } from "react";
 import TitleHeading from "./_components/common/heding/TitleHeading";
 import { 시간변수 } from "./_components/search/constant";
 import Space from "./_components/space/Space";
-import { cardSectionList } from "./_components/space/SpaceConstant";
+import { newSpaceList } from "./_components/space/SpaceConstant";
 import SpaceDetailHead from "./_components/space/SpaceDetailHead";
-import SpaceWeekCard from "./_components/space/SpaceWeekCard";
+import SpaceWeekCard from "./_components/space/spaceWeek/SpaceWeekCard";
 import CalendarUI from "./_components/space/WriteCalendar";
 import WriteForm from "./_components/write/WriteForm";
 
@@ -29,7 +29,6 @@ export default function Home() {
 	return (
 		<>
 			<div>test</div>
-
 			<SpaceDetailHead date={new Date(시간변수)} startIt={new Date(시간변수)} />
 			<CalendarUI
 				year={year}
@@ -39,16 +38,22 @@ export default function Home() {
 				minYear={2021}
 				maxYear={2022}
 			/>
-			<SpaceWeekCard cardList={cardSectionList} />
+			<SpaceWeekCard>
+				<SpaceWeekCard.Header
+					weekIndex={1}
+					weekDate={{
+						startAt: new Date(시간변수),
+						endAt: new Date(),
+					}}
+				/>
+				<SpaceWeekCard.Body cardList={newSpaceList(0)} />
+			</SpaceWeekCard>
+			<hr />
 			<WriteForm />
-
 			<button onClick={openActive}>모달 열기</button>
 			<TitleHeading>전체 스페이스</TitleHeading>
-
 			<Space />
-
 			<hr />
-
 			{/* {active && (
 				<Modal closeModal={closeActive}>
 					<Search />
