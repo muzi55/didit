@@ -7,6 +7,7 @@ import TitleHeading from "./_components/common/heding/TitleHeading";
 import { 시간변수 } from "./_components/search/constant";
 import Space from "./_components/space/Space";
 import SpaceDetailHead from "./_components/space/SpaceDetailHead";
+import SpaceWeekCard from "./_components/space/SpaceWeekCard";
 import CalendarUI from "./_components/space/WriteCalendar";
 import WriteForm from "./_components/write/WriteForm";
 
@@ -37,6 +38,7 @@ export default function Home() {
 				minYear={2021}
 				maxYear={2022}
 			/>
+			<SpaceWeekCard />
 			<WriteForm />
 
 			<button onClick={openActive}>모달 열기</button>

@@ -13,7 +13,7 @@ const meta = {
 
 	decorators: [
 		Story => (
-			<DecorationProvider style={{ width: "1600px" }}>
+			<DecorationProvider style={{ width: "800px" }}>
 				<Story />
 			</DecorationProvider>
 		),
