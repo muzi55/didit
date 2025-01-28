@@ -1,8 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 import DetailTitleHeading from "@/app/_components/common/title/DetailTitleHeading";
 import TitleHeading from "@/app/_components/common/title/TitleHeading";
 import TitleParent from "@/app/_components/common/title/TitleParent";
+import TItleTriggerListItem from "@/app/_components/common/title/TItleTriggerListItem";
+import { icons } from "@/shared/libs/common/icons";
 import DecorationProvider from "@/stories/DecorationProvider";
 
 const meta = {
@@ -14,7 +17,7 @@ const meta = {
 	tags: ["autodocs"],
 	decorators: [
 		Story => (
-			<DecorationProvider style={{ width: "500px" }}>
+			<DecorationProvider style={{ width: "500px", height: "200px" }}>
 				<Story />
 			</DecorationProvider>
 		),
@@ -47,7 +50,22 @@ export const Default: Story = {
 export const Detail_Title_Heading: Story = {
 	args: {
 		children: (
-			<DetailTitleHeading trigger={<div>테스트</div>}>
+			<DetailTitleHeading
+				trigger={
+					<>
+						<TItleTriggerListItem onClick={fn()} icon={icons.pencil()}>
+							수정하기
+						</TItleTriggerListItem>
+						<TItleTriggerListItem
+							color="danger"
+							onClick={fn()}
+							icon={icons.trash()}
+						>
+							삭제하기
+						</TItleTriggerListItem>
+					</>
+				}
+			>
 				스페이스
 			</DetailTitleHeading>
 		),

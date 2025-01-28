@@ -18,7 +18,7 @@ export default function TItleTriggerListItem({
 		<li>
 			<button
 				onClick={onClick}
-				className={`flex items-center gap-[10px] py-[8px] px-[20px] text-bodySmall400 ${colorClasses[color]}`}
+				className={`flex w-[190px] items-center gap-[10px] py-[8px] px-[20px] text-bodySmall400 ${colorClasses[color]}`}
 			>
 				<span>{icon}</span>
 				{children}

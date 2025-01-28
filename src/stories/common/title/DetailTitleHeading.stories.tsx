@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
 import DetailTitleHeading from "@/app/_components/common/title/DetailTitleHeading";
 import TItleTriggerListItem from "@/app/_components/common/title/TItleTriggerListItem";
@@ -36,19 +37,15 @@ const meta = {
 			},
 			default: (
 				<>
-					<TItleTriggerListItem
-						color="danger"
-						onClick={() => {}}
-						icon={icons.bell}
-					>
-						span
+					<TItleTriggerListItem onClick={fn()} icon={icons.pencil()}>
+						수정하기
 					</TItleTriggerListItem>
 					<TItleTriggerListItem
 						color="danger"
-						onClick={() => {}}
-						icon={icons.bell}
+						onClick={fn()}
+						icon={icons.trash()}
 					>
-						span
+						삭제하기
 					</TItleTriggerListItem>
 				</>
 			),
@@ -63,19 +60,15 @@ export const Default: Story = {
 	args: {
 		trigger: (
 			<>
-				<TItleTriggerListItem
-					color="danger"
-					onClick={() => {}}
-					icon={icons.bell}
-				>
-					span
+				<TItleTriggerListItem onClick={fn()} icon={icons.pencil()}>
+					수정하기
 				</TItleTriggerListItem>
 				<TItleTriggerListItem
 					color="danger"
-					onClick={() => {}}
-					icon={icons.bell}
+					onClick={fn()}
+					icon={icons.trash()}
 				>
-					span
+					삭제하기
 				</TItleTriggerListItem>
 			</>
 		),
