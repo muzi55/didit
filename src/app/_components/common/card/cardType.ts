@@ -1,6 +1,12 @@
+import type { TagType } from "../tag/type";
+
+export interface CardTagList {
+	label: string;
+	onClick: () => void;
+}
+
 export interface CardTagListProps {
-	listItem: Array<{
-		label: string;
-		onClick: () => void;
-	}>;
+	tagsType?: TagType;
+	viewFirstTag?: boolean;
+	listItem: CardTagList[];
 }

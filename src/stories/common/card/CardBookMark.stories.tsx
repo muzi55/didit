@@ -26,6 +26,13 @@ const meta = {
 			description: "북마크 텍스트",
 			defaultValue: "디딧",
 		},
+		active: {
+			control: {
+				type: "boolean",
+			},
+			description: "북마크 활성화 여부",
+			defaultValue: false,
+		},
 	},
 } satisfies Meta<typeof CardBookMark>;
 

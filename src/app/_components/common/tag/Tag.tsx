@@ -2,7 +2,8 @@ import React from "react";
 
 import { icons } from "@/shared/libs/common/icons";
 
-type TagType = "add" | "remove" | "hightLight";
+import type { TagType } from "./type";
+
 interface TagProps {
 	children: React.ReactNode;
 	onClick: () => void;
