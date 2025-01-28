@@ -19,11 +19,11 @@ const meta = {
 	],
 	argTypes: {
 		children: {
-			description: `타입: DetailTitleHeadingProps `,
+			description: `제목 요소`,
 			control: {
 				type: "text",
 			},
-			default: <h2 className="text-H4 ml-[11px]">전체 스페이스</h2>,
+			default: "Didit Detail",
 		},
 		trigger: {
 			description: `타입: DetailTitleHeadingProps <br />
