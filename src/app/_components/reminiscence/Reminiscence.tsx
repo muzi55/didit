@@ -9,7 +9,7 @@ import TItleTriggerListItem from "../common/title/TItleTriggerListItem";
 
 export default function Reminiscence() {
 	return (
-		<div className="w-[800px] m-auto pt-[48px]">
+		<div className="w-full m-auto pt-[48px]">
 			<TitleParent>
 				<DetailTitleHeading
 					trigger={
