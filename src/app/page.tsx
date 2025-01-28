@@ -1,6 +1,7 @@
 "use client";
 
 import Space from "./_components/space/Space";
+import TestMEditor from "./editor/MDEditor";
 import TestEditor from "./editor/TestEditor";
 
 export default function Home() {
@@ -8,6 +9,10 @@ export default function Home() {
 
 	return (
 		<>
+			<div>
+				<p className="bg-red-300">asd</p>
+				<TestMEditor />
+			</div>
 			<p>asd</p>
 			<TestEditor />
 			<p>asd</p>
