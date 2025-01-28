@@ -1,11 +1,16 @@
 "use client";
 
 import Space from "./_components/space/Space";
+import TestEditor from "./editor/TestEditor";
 
 export default function Home() {
 	// console.log(year, month);
+
 	return (
 		<>
+			<p>asd</p>
+			<TestEditor />
+			<p>asd</p>
 			<div>test</div>
 
 			<Space />
