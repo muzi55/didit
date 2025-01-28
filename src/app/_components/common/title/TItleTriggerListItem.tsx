@@ -1,11 +1,7 @@
 import React from "react";
 
-interface TitleTriggerListItemProps {
-	icon: React.ReactNode;
-	children: string;
-	onClick: () => void;
-	color?: "textSecondary" | "danger" | "textPrimary";
-}
+import type { TitleTriggerListItemProps } from "./titleType";
+
 export default function TItleTriggerListItem({
 	icon,
 	children,

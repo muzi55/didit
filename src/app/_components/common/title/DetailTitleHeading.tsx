@@ -24,9 +24,9 @@ export default function DetailTitleHeading({
 			<div className="relative">
 				<button onClick={toggleShowHandler}>{icons.threeDots}</button>
 				{isShow && (
-					<div className="absolute -bottom-[15px] translate-y-full right-0 bg-white border border-gray-3 rounded-[6px] py-[10px]">
+					<ul className="absolute -bottom-[15px] translate-y-full right-0 bg-white border border-gray-3 rounded-[6px] py-[10px]">
 						{trigger}
-					</div>
+					</ul>
 				)}
 			</div>
 		</div>

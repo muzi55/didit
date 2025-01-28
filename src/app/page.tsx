@@ -17,28 +17,29 @@ export default function Home() {
 				<TitleHeading>스페이스</TitleHeading>
 			</TitleParent>
 
-			<ul>
-				<TItleTriggerListItem onClick={() => {}} icon={icons.bell}>
-					span
-				</TItleTriggerListItem>
-				<TItleTriggerListItem
-					color="textPrimary"
-					onClick={() => {}}
-					icon={icons.bell}
-				>
-					span
-				</TItleTriggerListItem>
-				<TItleTriggerListItem
-					color="danger"
-					onClick={() => {}}
-					icon={icons.bell}
-				>
-					span
-				</TItleTriggerListItem>
-			</ul>
-
 			<TitleParent>
-				<DetailTitleHeading trigger={<div>123</div>}>ㅁㄴㅇ</DetailTitleHeading>
+				<DetailTitleHeading
+					trigger={
+						<>
+							<TItleTriggerListItem
+								color="danger"
+								onClick={() => {}}
+								icon={icons.bell}
+							>
+								span
+							</TItleTriggerListItem>
+							<TItleTriggerListItem
+								color="danger"
+								onClick={() => {}}
+								icon={icons.bell}
+							>
+								span
+							</TItleTriggerListItem>
+						</>
+					}
+				>
+					ㅁㄴㅇ
+				</DetailTitleHeading>
 			</TitleParent>
 
 			{/* <DetailTitleHeading /> */}

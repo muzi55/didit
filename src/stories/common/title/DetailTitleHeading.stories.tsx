@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import DetailTitleHeading from "@/app/_components/common/title/DetailTitleHeading";
+import TItleTriggerListItem from "@/app/_components/common/title/TItleTriggerListItem";
+import { icons } from "@/shared/libs/common/icons";
 import DecorationProvider from "@/stories/DecorationProvider";
 
 const meta = {
@@ -32,7 +34,24 @@ const meta = {
 			control: {
 				type: "object",
 			},
-			default: "Didit Detail",
+			default: (
+				<>
+					<TItleTriggerListItem
+						color="danger"
+						onClick={() => {}}
+						icon={icons.bell}
+					>
+						span
+					</TItleTriggerListItem>
+					<TItleTriggerListItem
+						color="danger"
+						onClick={() => {}}
+						icon={icons.bell}
+					>
+						span
+					</TItleTriggerListItem>
+				</>
+			),
 		},
 	},
 } satisfies Meta<typeof DetailTitleHeading>;
@@ -42,7 +61,24 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	args: {
-		trigger: <div>테스트</div>,
+		trigger: (
+			<>
+				<TItleTriggerListItem
+					color="danger"
+					onClick={() => {}}
+					icon={icons.bell}
+				>
+					span
+				</TItleTriggerListItem>
+				<TItleTriggerListItem
+					color="danger"
+					onClick={() => {}}
+					icon={icons.bell}
+				>
+					span
+				</TItleTriggerListItem>
+			</>
+		),
 		children: "Didit Detail",
 	},
 };
