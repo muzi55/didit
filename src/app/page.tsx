@@ -1,19 +1,8 @@
 "use client";
 
-import { useState } from "react";
-
 import Space from "./_components/space/Space";
 
 export default function Home() {
-	const [active, setActive] = useState<boolean>(false);
-	const closeActive = () => {
-		setActive(false);
-	};
-
-	const openActive = () => {
-		setActive(true);
-	};
-
 	// console.log(year, month);
 	return (
 		<>
