@@ -19,7 +19,7 @@ export default function SpaceDetailHead({
 		day: dayjs(date).format("DD"),
 	};
 	return (
-		<div className="flex justify-between w-full">
+		<div className="flex justify-between items-center w-full">
 			<div className="flex flex-col gap-[7px] px-[20px] border-l-[3px] border-primary text-dark-5 text-bodyMedium500">
 				<p>
 					기록기간:&nbsp;
