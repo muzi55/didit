@@ -171,3 +171,18 @@ export const cardSectionList2: SpaceCardList[] = [
 		],
 	},
 ];
+
+export const newSpaceList = (length: number) =>
+	Array.from({ length }, (_, i) => ({
+		id: `${i}`,
+		title: `스페이스${i}`,
+		content: `스페이스${i} 내용`,
+		tagList: [
+			{
+				label: "태그1",
+				onClick: () => {
+					console.log();
+				},
+			},
+		],
+	}));
