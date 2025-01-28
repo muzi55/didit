@@ -1,23 +1,24 @@
 "use client";
 
+import DetailTitleHeading from "./_components/common/title/DetailTitleHeading";
+import TitleHeading from "./_components/common/title/TitleHeading";
+import TitleParent from "./_components/common/title/TitleParent";
 import Space from "./_components/space/Space";
-import TestMEditor from "./editor/MDEditor";
-import TestEditor from "./editor/TestEditor";
 
 export default function Home() {
 	// console.log(year, month);
 
 	return (
 		<>
-			<div>
-				<p className="bg-red-300">asd</p>
-				<TestMEditor />
-			</div>
-			<p>asd</p>
-			<TestEditor />
-			<p>asd</p>
-			<div>test</div>
+			<TitleParent>
+				<TitleHeading>스페이스</TitleHeading>
+			</TitleParent>
 
+			<TitleParent>
+				<DetailTitleHeading trigger={<div>123</div>}>ㅁㄴㅇ</DetailTitleHeading>
+			</TitleParent>
+
+			{/* <DetailTitleHeading /> */}
 			<Space />
 
 			{/* <button onClick={openActive}>모달 열기</button> */}

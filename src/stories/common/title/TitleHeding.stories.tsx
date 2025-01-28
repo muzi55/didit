@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TitleHeading from "@/app/_components/common/heding/TitleHeading";
+import TitleHeading from "@/app/_components/common/title/TitleHeading";
 import DecorationProvider from "@/stories/DecorationProvider";
 
 const meta = {
-	title: "Common/TitleHeading",
+	title: "Common/Title/TitleHeading",
 	component: TitleHeading,
 	parameters: {
 		layout: "centered",
@@ -22,8 +22,8 @@ const meta = {
 			control: {
 				type: "text",
 			},
-			description: "제목 요소",
-			defaultValue: "전체 스페이스",
+			description: "타입: TitleProps",
+			defaultValue: "React.ReactElement<TitleProps>[]",
 		},
 	},
 } satisfies Meta<typeof TitleHeading>;

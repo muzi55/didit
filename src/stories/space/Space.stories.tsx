@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import TitleHeading from "@/app/_components/common/heding/TitleHeading";
+import TitleHeading from "@/app/_components/common/title/TitleHeading";
 import { 시간변수 } from "@/app/_components/search/constant";
 import { CreateNewSpace } from "@/app/_components/space/CreateNewSpace";
 import Space from "@/app/_components/space/Space";

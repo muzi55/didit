@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import React, { useState } from "react";
 
-import TitleHeading from "../common/heding/TitleHeading";
+import TitleHeading from "../common/title/TitleHeading";
 import { 시간변수 } from "../search/constant";
 import WriteForm from "../write/WriteForm";
 import { CreateNewSpace } from "./CreateNewSpace";
